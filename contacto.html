@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Portafolio Sebastian Bohorquez</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Sebastian Bohorquez Coronado <span>Estudiante</span></h1>
+    </header>
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html">Inicio</a> 
+            <a href="quien-soy.html">Quien Soy</a>
+            <a href="Proyectos.html">Proyectos</a> 
+            <a href="contacto.html">Contacto</a>
+            <button class="boton-modo " id="boton-modo" > Modo Claro</button>
+
+        </nav>
+    </div>
+
+    <section class="hero">
+        <div class="contenido-hero">
+            <div class="ubicacion">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="#ffffff" class="icon icon-tabler icons-tabler-filled icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6" /></svg>
+                <p>La Ye - Sahagun, Cordoba</p>
+            </div> 
+            <a class="boton" href="#">Contactar</a>
+        </div> <!-- Aqui se termina el contenido hero -->
+    </section>
+    
+    <main class="contenedor sombra">
+        <section>
+            <h2>Contacto</h2>
+
+
+            <form class="formulario" action="https://formsubmit.co/sebastianbohorquez4607@gmail.com" method="POST">
+                <fieldset>
+                    <legend>Contáctame llenando todos los campos</legend>
+
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <label for="nombre">Nombre:</label>
+                            <input class="input-text" type="text" id="nombre" name="nombre" placeholder="Nombre completo">
+                        </div>
+
+                        <div class="campo">
+                            <label for="telefono">Teléfono:</label>
+                            <input class="input-text" type="tel" id="telefono" name="telefono" placeholder="Tu Teléfono">
+                        </div>
+
+                        <div class="campo">
+                            <label for="email">Correo Electrónico:</label>
+                            <input class="input-text" type="email" id="email" name="email" placeholder="Tu E-mail">
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensaje">Mensaje:</label>
+                            <textarea class="input-text" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí"></textarea>
+                        </div>                   
+                    </div>
+                    
+
+                    <div class="alinear-derecha flex">
+                        <input class="boton w-sm-100" type="submit" value="Enviar">
+                    </div>
+                </fieldset>
+            </form>
+
+        </section>
+                        
+    </main>
+    
+    <footer class="footer">
+        <p>Todos los derechos reservados. Sebastian Bohorquez Coronado - Ingeniero de Sistemas</p>
+        <p>© 2026 Blod Personal — Marca personal</p>
+    </footer>
+
+    <script src="/JavaScript/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Portafolio Sebastian Bohorquez</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Sebastian Bohorquez Coronado <span>Estudiante</span></h1>
+    </header>
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html">Inicio</a> 
+            <a href="quien-soy.html">Quien Soy</a>
+            <a href="Proyectos.html">Proyectos</a> 
+            <a href="contacto.html">Contacto</a>
+            <button class="boton-modo " id="boton-modo" > Modo Claro</button>
+
+        </nav>
+    </div>
+
+    <section class="hero">
+        <div class="contenido-hero">
+          <h1>SEBASTIAN BOHORQUEZ</h1>
+        </div>
+        
+    </section>
+    
+    <main class="contenedor sombra">
+       <section class="quien-soy-section">
+            <div class="perfil-container">
+                <div class="perfil-imagen">
+                    <img src="/img/FotoMia2.png" alt="Sebastian Bohorquez Coronado" class="perfil-foto">
+                </div>
+                <div class="perfil-info">
+                <h2>Sobre Mí</h2>
+                <p id="bio-corta" class="visible">
+                    Estudiante de Ingeniería de Sistemas 💻
+                    Apasionado por la programación en Java y el desarrollo web 🌐
+                    Amante de la lógica, los algoritmos y la tecnología 🚀
+                    En constante aprendizaje.
+                </p>
+
+                <p id="bio-completa"  class="oculto">
+                    Soy estudiante de Ingeniería de Sistemas, apasionado por la programación y el desarrollo de soluciones tecnológicas orientadas a resolver problemas reales.
+                    También he trabajado en el diseño y desarrollo de páginas web utilizando HTML y CSS, enfocándome en interfaces organizadas, funcionales y responsivas. 
+                    <br> 
+                    <br>
+                    Me interesa comprender la lógica detrás de cada algoritmo, fortalecer mis bases en programación orientada a objetos y seguir creciendo como desarrollador. <br>
+                    Soy disciplinado, constante y comprometido con cada proyecto académico, combinando el aprendizaje técnico con la capacidad de explicar y comunicar soluciones de manera clara.
+                </p>
+
+               <button id="boton-vermas"  class="boton"> Ver mas</button>
+            </div> <!-- cierre de perfil-container -->
+        </section>
+
+        <div class="informacion-personal">
+            <h3>Información Personal</h3>
+            <ul class="info-list">
+                <li>
+                    <span class="icon">📍</span>
+                    <span class="label">Ubicación:</span>
+                    <span class="value">La Ye - Sahagún, Córdoba, Colombia</span>
+                </li>
+                <li>
+                    <span class="icon">🎓</span>
+                    <span class="label">Estudios:</span>
+                    <span class="value">Ingeniería de Sistemas / Robotica</span>
+                </li>
+                <li>
+                    <span class="icon">💻</span>
+                    <span class="label">Especialidad:</span>
+                    <span class="value">Desarrollo Web y Videojuegos</span>
+                </li>
+                <li>
+                    <span class="icon">📧</span>
+                    <span class="label">Email:</span>
+                    <span class="value">sebastianbohorquez4607@gmail.com</span>
+                </li>
+            </ul>
+        </div>
+    
+
+
+        <div class="habilidades-section">
+            <h3>Mis Habilidades</h3>
+            <div class="habilidades-grid">
+                <div class="habilidad-card">
+                    <div class="habilidad-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <h4>Desarrollo Web</h4>
+                    <p>HTML5, CSS3, JavaScript.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%"></div>
+                    </div>
+                </div>
+
+                <div class="habilidad-card">
+                    <div class="habilidad-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h4>Desarrollo de Interfaces</h4>
+                    <p>Java Swing, diseño UI, aplicaciones de escritorio.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%"></div>
+                    </div>
+                </div>
+
+                <div class="habilidad-card">
+                    <div class="habilidad-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#2EC4B6" class="icon icon-tabler icons-tabler-filled icon-tabler-database"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 15.731c1.968 1.507 5.234 2.269 9 2.269c3.76 0 7.025 -.76 9 -2.252v2.252c0 2.425 -3.895 3.936 -8.693 3.998l-.307 .002c-4.938 0 -9 -1.523 -9 -4z" /><path d="M3 9.731c1.968 1.507 5.234 2.269 9 2.269c3.76 0 7.025 -.76 9 -2.252v2.252c0 2.477 -4.062 4 -9 4c-4.798 0 -8.77 -1.438 -8.979 -3.795l-.016 -.101l-.005 -.104z" /><path d="M12 2c1.041 0 2.044 .068 2.977 .198l.469 .071q .84 .14 1.586 .348l.44 .131l.075 .024a11 11 0 0 1 .805 .3l.199 .086q .535 .242 .967 .53q .165 .11 .313 .225a3.8 3.8 0 0 1 .669 .668l.091 .128q .07 .105 .129 .211l.07 .139q .163 .35 .2 .73l.01 .211c0 2.477 -4.062 4 -9 4c-4.798 0 -8.77 -1.438 -8.979 -3.795a1 1 0 0 1 -.021 -.205l.005 -.104l.016 -.1c.205 -2.306 4.01 -3.733 8.667 -3.794z" /></svg>
+                    </div>
+                    <h4>Estructuras de Datos</h4>
+                    <p>Listas, Pilas, Colas, Árboles, Recursividad.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 65%"></div>
+                    </div>
+                </div>
+
+                    <div class="habilidad-card">
+                        <div class="habilidad-icon">
+                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-cube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 16.008v-8.018a1.98 1.98 0 0 0 -1 -1.717l-7 -4.008a2.016 2.016 0 0 0 -2 0l-7 4.008c-.619 .355 -1 1.01 -1 1.718v8.018c0 .709 .381 1.363 1 1.717l7 4.008a2.016 2.016 0 0 0 2 0l7 -4.008c.619 -.355 1 -1.01 1 -1.718" /><path d="M12 22v-10" /><path d="M12 12l8.73 -5.04" /><path d="M3.27 6.96l8.73 5.04" /></svg>
+                        </div>
+                        <h4>Programación Orientada a Objetos</h4>
+                        <p>Java, estructuras de datos, algoritmos, recursividad</p>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="intereses-section">
+            <h3>Mis Intereses</h3>
+            <div class="intereses-grid">
+                <div class="interes-item">
+                    <span class="interes-icon">🎮</span>
+                    <span class="interes-text">Videojuegos</span>
+                </div>
+                <div class="interes-item">
+                    <span class="interes-icon">💻</span>
+                    <span class="interes-text">Programación</span>
+                </div>
+                <div class="interes-item">
+                    <span class="interes-icon">📱</span>
+                    <span class="interes-text">Tecnología</span>
+                </div>
+                <div class="interes-item">
+                    <span class="interes-icon">📚</span>
+                    <span class="interes-text">Aprendizaje</span>
+                </div>
+                <div class="interes-item">
+                    <span class="interes-icon">🎬</span>
+                    <span class="interes-text">Cine</span>
+                </div>
+                <div class="interes-item">
+                    <span class="interes-icon">🎵</span>
+                    <span class="interes-text">Música</span>
+                </div>
+                <div class="interes-item">
+                    <span class="interes-icon">🍥</span>
+                    <span class="interes-text">Anime</span>
+                </div>
+                <div class="interes-item">
+                    <span class="interes-icon">🤖</span>
+                    <span class="interes-text">Robotica</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="frase-section">
+            <blockquote>
+                "La tecnología es mejor cuando une a las personas"
+            </blockquote>
+            <cite>- Matt Mullenweg</cite>
+        </div>
+        </section>
+
+    </main>
+    
+    <footer class="footer">
+        <p>Todos los derechos reservados. Sebastian Bohorquez Coronado - Ingeniero de Sistemas</p>
+        <p>© 2026 Blod Personal — Marca personal</p>
+    </footer>
+
+    <script src="/JavaScript/script.js"></script>
+
+</body>
+</html>
