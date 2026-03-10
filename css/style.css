@@ -75,6 +75,14 @@ body{
     z-index: 1000;
 }
 
+.nav-bg a.activo {
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.8);
+    background-color: var(--VerdeMenta) transparent 100%;
+    color: var(--VerdeMenta);
+    border-radius: 5px;
+}
+
+
 .navegacion-principal {
     display: flex;
     flex-direction: column;
@@ -602,6 +610,31 @@ h1,h2,h3{
 
 /** ============================== PAGINA QUIEN SOY ==============================**/
 
+.section{
+    display: flex;
+    width: 600px;
+    height: 550px;
+        margin: 0 auto;
+        gap: 1rem;
+        margin-top: 2rem;
+}
+.section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: 0.2s ease;
+}
+
+section img:hover{
+    cursor: pointer;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%) ;
+}
+
+
+
 /* Perfil Container */
 .perfil-container {
     display: grid;
@@ -1040,6 +1073,81 @@ h1,h2,h3{
 
 /** ============================== PAGINA PROYECTOS ==============================**/
 
+.parrafo-proyecto{
+    text-align: center;
+    color: var(--Blanco);
+    font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+    margin-bottom: 2rem;
+}
+
+.filtros{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:1rem;
+    margin-bottom:3rem;
+}
+
+.btn-filtro{
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:var(--GrisClaro);
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-filtro:hover{
+    background:var(--VerdeMenta);
+}
+
+.btn-filtro.activo{
+    background:var(--VerdeMenta);
+}
+
+/* GRID PROYECTOS */
+
+.proyectos-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:2rem;
+}
+
+.proyecto-card{
+    background:var(--Negro);
+    color:white;
+    padding:1.5rem;
+    border-radius:10px;
+    text-align:center;
+    transition:.3s;
+}
+
+.proyecto-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(255, 255, 255, 0.4);
+}
+
+.proyecto-card img{
+    width:100%;
+    border-radius:8px;
+    margin-bottom:1rem;
+}
+
+.btn-proyecto{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 16px;
+    background:var(--VerdeMenta);
+    color:black;
+    border-radius:20px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn-proyecto:hover{
+    background-color:var(--Blanco);
+}
 
 /** ============================== PAGINA CONTACTO ==============================**/
 
@@ -1140,6 +1248,13 @@ h1,h2,h3{
 
 .dark-mode .nav-bg {
     background-color: #f2f2f2;
+}
+
+.dark-mode .nav-bg a.activo {
+    box-shadow: 0 8px 20px rgba(32, 215, 142, 0.8);
+    background-color: var(--VerdeMenta) transparent 100%;
+    color: var(--VerdeMenta);
+    border-radius: 5px;
 }
 
 .dark-mode .navegacion-principal a {

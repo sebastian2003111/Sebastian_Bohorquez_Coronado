@@ -22,7 +22,7 @@ if(formulario){
         }
 
         const datosFormulario = {nombre, telefono, correo, mensaje};
-        localStorage.setItem('Contacto ' + nombre, JSON.stringify(datosFormulario));
+        localStorage.setItem('Contacto', JSON.stringify(datosFormulario));
 
         alert('Mensaje enviado correctamente');
         formulario.reset();
@@ -30,7 +30,7 @@ if(formulario){
 }
 
 
-const datosGuardados = localStorage.getItem('Contacto ' + nombre);
+const datosGuardados = localStorage.getItem('Contacto ');
 if (datosGuardados){
     console.log(JSON.parse(datosGuardados));
 }
@@ -108,6 +108,36 @@ if (contadores.length > 0) {
         }, 25)
     })
 }
+
+/* ================= FILTROS PROYECTOS ================= */
+
+const botonesFiltro = document.querySelectorAll(".btn-filtro");
+const proyectos = document.querySelectorAll(".proyecto-card");
+
+botonesFiltro.forEach(boton => {
+
+  boton.addEventListener("click", () => {
+
+    const filtro = boton.dataset.filtro;
+
+    botonesFiltro.forEach(btn => btn.classList.remove("activo"));
+    boton.classList.add("activo");
+
+    proyectos.forEach(proyecto => {
+
+      const categoria = proyecto.dataset.categoria;
+
+      if (filtro === "todos" || filtro === categoria) {
+        proyecto.style.display = "block";
+      } else {
+        proyecto.style.display = "none";
+      }
+
+    });
+
+  });
+
+});
 
 /* ================= MODO OSCURO CON PERSISTENCIA ================= */
 

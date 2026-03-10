@@ -25,8 +25,8 @@
         <nav class="navegacion-principal contenedor">
             <a href="index.html">Inicio</a> 
             <a href="quien-soy.html">Quien Soy</a>
-            <a href="Proyectos.html">Proyectos</a> 
-            <a href="#">Contacto</a>
+            <a href="Proyectos.html" class="activo">Proyectos</a> 
+            <a href="contacto.html">Contacto</a>
             <button class="boton-modo " id="boton-modo" > Modo Claro</button>
 
         </nav>
@@ -43,6 +43,48 @@
     </section>
     
     <main class="contenedor sombra">
+
+        <section class="intro-proyectos">         
+            <h2>Mis Proyectos</h2>
+            <p class="parrafo-proyecto">
+                En esta sección encontrarás algunos de los proyectos en los que he trabajado,
+                relacionados con robótica, desarrollo web y tecnología.
+            </p>
+        </section>
+
+        <div class="filtros">
+            <button class="btn-filtro activo" data-filtro="todos">Todos</button>
+            <button class="btn-filtro" data-filtro="robotica">Robótica</button>
+            <button class="btn-filtro" data-filtro="desarrolloWeb">Desarrollo Web</button>
+            <button class="btn-filtro" data-filtro="web">Animaciones Web</button>
+            <button class="btn-filtro" data-filtro="animaciones">Animaciones en Python</button>
+            <button class="btn-filtro" data-filtro="investigacion">Investigación</button>
+        </div>
+
+        <section class="proyectos-grid">
+
+        <div class="proyecto-card" data-categoria="robotica">
+            <img src="img/proyecto1.jpg" alt="">
+            <h3>Proyecto VIGI-BOT</h3>
+            <p>Robot movil de vigilancia desarrollado con Arduino.</p>
+            <a href="#" class="btn-proyecto">Ver proyecto</a>
+        </div>
+
+        <div class="proyecto-card" data-categoria="desarrolloWeb">
+            <img src="img/proyecto2.jpg" alt="">
+            <h3>Portafolio Web</h3>
+            <p>Sitio web personal desarrollado con HTML, CSS y JS.</p>
+            <a href="#" class="btn-proyecto">Ver proyecto</a>
+        </div>
+
+        <div class="proyecto-card" data-categoria="impresion3d">
+            <img src="img/proyecto3.jpg" alt="">
+            <h3>Carcasa Impresa</h3>
+            <p>Diseño de pieza mecánica en 3D.</p>
+            <a href="#" class="btn-proyecto">Ver proyecto</a>
+        </div>
+
+        </section>
  
 
     </main>
@@ -51,6 +93,8 @@
         <p>Todos los derechos reservados. Sebastian Bohorquez Coronado - Ingeniero de Sistemas</p>
         <p>© 2026 Blod Personal — Marca personal</p>
     </footer>
+
+    <script src="JavaScript/script.js"></script>
 
 </body>
 </html>
