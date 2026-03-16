@@ -664,6 +664,7 @@ section img:hover{
     transform: scale(1.08);
     box-shadow: 0 15px 50px rgba(46, 196, 182, 0.5);
     border-color: #000000;
+    
 }
 
 .imagen-placeholder {
