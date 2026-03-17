@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <title>Portafolio Sebastian Bohorquez</title>
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Sebastian Bohorquez Coronado <span>Estudiante</span></h1>
+    </header>
+
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html">Inicio</a> 
+            <a href="quien-soy.html">Quien Soy</a>
+            <a href="Proyectos.html" class="activo">Proyectos</a> 
+            <a href="contacto.html">Contacto</a>
+            <button class="boton-modo " id="boton-modo" > Modo Claro</button>
+
+        </nav>
+    </div>
+
+    <section class="hero">
+        <div class="contenido-hero">
+            <div class="ubicacion">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="#ffffff" class="icono icon-tabler icons-tabler-filled icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6" /></svg>
+                <p>La Ye - Sahagun, Cordoba</p>
+            </div> 
+            <a class="boton" href="contacto.html">Contactar</a>
+        </div> <!-- Aqui se termina el contenido hero -->
+    </section>
+    
+    <main class="contenedor sombra">
+
+        <section class="intro-proyectos">         
+            <h2>Proyecto VIGI-BOT</h2>
+        </section>
+
+        <section class="proyectos-grid">
+        <section class="vigi-bot-section">
+            <div class="vigi-bot-container">
+                <div class="vigi-bot-imagen">
+                    <img src="/img_VIGI-BOT/VIGI-BOT.jpg" alt="Sebastian Bohorquez Coronado" class="vigi-bot-foto">
+                </div>
+                <div class="vigi-bot-info">
+                <h2>Idea inicial y propósito del robot</h2>
+                <p id="bio-corta" class="visible">
+                   El proyecto VIGI-BOT consiste en el diseño y construcción de un robot móvil de vigilancia capaz de desplazarse en entornos
+                    interiores y superficies semi-irregulares, transmitiendo video en tiempo real mediante conexión Wifi.
+                </p>
+
+                <p id="bio-completa"  class="oculto">
+                    Su propósito principal es permitir la inspección visual remota de espacios donde el acceso humano puede resultar incómodo o riesgoso, además de servir como plataforma educativa para el aprendizaje de robótica móvil, sistemas embebidos y comunicación inalámbrica.
+                </p>
+
+               <button id="boton-vermas"  class="boton"> Ver mas</button>
+            </div> <!-- cierre de perfil-container -->
+        </section>
+
+        </section>
+ 
+
+    </main>
+    
+    <footer class="footer">
+        <p>Todos los derechos reservados. Sebastian Bohorquez Coronado - Ingeniero de Sistemas</p>
+        <p>© 2026 Blod Personal — Marca personal</p>
+    </footer>
+
+    <script src="JavaScript/script.js"></script>
+
+</body>
+</html>

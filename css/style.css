@@ -1340,3 +1340,96 @@ footer p {
 
 }
 
+/**
+======================================================================================
+
+  PROYECTOS
+
+======================================================================================
+**/
+
+.section{
+    display: flex;
+    width: 600px;
+    height: 550px;
+        margin: 0 auto;
+        gap: 1rem;
+        margin-top: 2rem;
+}
+.section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: 0.2s ease;
+}
+
+section img:hover{
+    cursor: pointer;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%) ;
+}
+
+
+
+/* VIGI-BOT Container */
+.vigi-bot-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.vigi-bot-imagen {
+    display: flex;
+    justify-content: center;
+}
+
+.vigi-bot-foto {
+    width: 200px;
+    height: 200px;
+    border: 4px solid var(--VerdeMenta);
+    box-shadow: 0 10px 40px rgba(46, 196, 182, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    
+}
+
+.vigi-bot-foto:hover {
+    transform: scale(1.4);
+    box-shadow: 0 15px 50px rgba(46, 196, 182, 0.5);
+    border-color: #000000;
+    
+}
+
+.imagen-placeholder {
+    display: none;
+}
+
+.vigi-bot-info {
+    text-align: center;
+    color: var(--Blanco);
+}
+
+.oculto{
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height .6s ease, opacity .4s ease;
+}
+
+.visible{
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height .6s ease, opacity .4s ease;
+}
+
+.vigi-bot-info h2 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: var(--Blanco);
+    margin-bottom: 1rem;
+    border-bottom: 3px solid var(--VerdeMenta);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
