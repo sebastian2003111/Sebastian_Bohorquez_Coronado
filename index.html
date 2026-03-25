@@ -17,17 +17,29 @@
     <title>Portafolio Sebastian Bohorquez</title>
 </head>
 <body>
-    <header>
-        <h1 class="titulo">Sebastian Bohorquez Coronado <span>Estudiante</span></h1>
+ 
+    <header class="header">
+        <h1 class="titulo">
+            Sebastian Bohorquez Coronado <span>Ing. Sistemas</span>
+        </h1>
     </header>
-
+    
     <div class="nav-bg">
         <nav class="navegacion-principal contenedor">
-            <a href="index.html" class="activo">Inicio</a> 
-            <a href="quien-soy.html">Quien Soy</a>
-            <a href="Proyectos.html">Proyectos</a> 
-            <a href="contacto.html">Contacto</a>
-            <button class="boton-modo " id="boton-modo" > Modo Claro</button>
+
+            <!-- MENÚ -->
+            <div class="menu-nav">
+                <a href="index.html" class="activo">Inicio</a> 
+                <a href="quien-soy.html">Quien Soy</a>
+                <a href="Proyectos.html">Proyectos</a> 
+                <a href="contacto.html">Contacto</a>
+                <button class="boton-modo" id="boton-modo">Modo Claro</button>
+            </div>
+
+            <!-- BOTÓN HAMBURGUESA -->
+            <div class="toggle" id="toggle-menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#2EC4B6" class="icono icon-tabler icons-tabler-filled icon-tabler-menu-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 6a1 1 0 0 1 -1 1h-16a1 1 0 1 1 0 -2h16a1 1 0 0 1 1 1" /><path d="M21 12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" /><path d="M21 18a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" /></svg>
+            </div>
 
         </nav>
     </div>
@@ -109,8 +121,10 @@
 
     <div class="grid-proyectos">
         <div class="proyecto">
-            <h3>Sistema de Gestión Ganadera</h3>
-            <p>Aplicación desarrollada en Java Swing para la administración de una finca ganadera, aplicando principios de ingeniería de software.</p>
+            <h3>Proyecto VIGI-BOT</h3>
+            <p> consiste en el diseño y construcción de un robot móvil de vigilancia
+                capaz de desplazarse en entornosinteriores y superficies semi-irregulares,
+                transmitiendo video en tiempo real mediante conexión Wifi.</p>
         </div>
 
         <div class="proyecto">
@@ -118,19 +132,16 @@
             <p>Aplicación en Java utilizando estructuras de datos y colecciones para la gestión eficiente de productos.</p>
         </div>
 
-        <div class="proyecto">
-            <h3>Control Web con ESP32</h3>
-            <p>Proyecto de control de LEDs vía navegador web utilizando ESP32 y programación embebida.</p>
-        </div>
     </div>
-
-    <a class="boton-ver-proyectos" href="Proyectos.html">Ver todos los proyectos</a>
+    <div>
+        <a class="boton-ver-proyectos" href="Proyectos.html">Ver todos los proyectos</a>
+    </div>
 </section>
 
 
 <!-- LLAMADO A LA ACCION -->
 <section class="cta">
-    <h2>¿Tienes una idea en mente?</h2>
+    <h2 class="tienes-idea">¿Tienes una idea en mente?</h2>
     <p>Estoy disponible para colaborar en proyectos académicos o personales.</p>
     <a class="boton" href="contacto.html">Hablemos</a>
 </section>

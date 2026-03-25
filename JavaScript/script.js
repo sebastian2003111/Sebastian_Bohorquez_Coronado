@@ -1,3 +1,13 @@
+/* ================= MENU RESPONSIVE ================= */
+
+const toggleMenuBtn = document.getElementById("toggle-menu");
+const menuNav = document.querySelector(".menu-nav");
+
+if (toggleMenuBtn && menuNav) {
+    toggleMenuBtn.addEventListener("click", () => {
+        menuNav.classList.toggle("open");
+    });
+}
 /**  ================================== INDEX ==================================**/
 
 const formulario = document.querySelector('.formulario');
