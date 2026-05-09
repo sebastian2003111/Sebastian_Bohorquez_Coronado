@@ -659,16 +659,32 @@ h1,h2,h3{
 
 
 /** ============================== PAGINA QUIEN SOY ==============================**/
+/* En tu archivo CSS */
+.contenido-hero h1 {
+    
+  font-size: 80px;        /* ajusta el tamaño que quieras */
+  font-weight: 900;
+  letter-spacing: 6px;
+  text-transform: uppercase;
 
-.section{
-    display: flex;
-    width: 600px;
-    height: 550px;
-        margin: 0 auto;
-        gap: 1rem;
-        margin-top: 2rem;
+  background-image: url('/Sebastian_Bohorquez_Coronado/img/hero.png');  /* ← cambia por tu imagen */
+  background-size: cover;
+  background-position: center;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
-.section img{
+.section .fotomia{
+    display: flex;
+    width: 50px;
+    height: 70%;
+    margin: 0 auto;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.section .fotomia{
     width: 0px;
     flex-grow: 1;
     object-fit: cover;
@@ -676,7 +692,7 @@ h1,h2,h3{
     transition: 0.2s ease;
 }
 
-section img:hover{
+.section .fotomia:hover{
     cursor: pointer;
     width: 300px;
     opacity: 1;
@@ -1542,6 +1558,10 @@ section img:hover{
     
 }
 
+.dark-mode .objetivo-vigi-bot{
+    color: var(--Negro);
+}
+
 /** =====================================
 
 ---------- FOOTER 
@@ -1670,4 +1690,12 @@ section img:hover{
 .dark-mode .vigi-bot-info {
     text-align: center;
     color: var(--Negro);            
+}
+
+/**Objetivo VIGI-BOT**/
+
+.objetivo-vigi-bot {
+    color: var(--Blanco);
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    line-height: 1.6;
 }
