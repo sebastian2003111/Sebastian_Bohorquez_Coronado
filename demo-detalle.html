@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Interactiva: Carta y Corazón Digital | Sebastian Bohorquez</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f43f5e;
+            --primary-glow: rgba(244, 63, 94, 0.4);
+            --dark: #090d16;
+            --card-bg: rgba(15, 23, 42, 0.85);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at center, #1e1b4b 0%, #090d16 100%);
+            color: #f8fafc;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            position: relative;
+            padding: 1.5rem;
+        }
+
+        /* Floating Hearts Canvas Background */
+        #canvas-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background: rgba(9, 13, 22, 0.7);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .volver-btn {
+            color: #2ec4b6;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.3s;
+        }
+
+        .volver-btn:hover {
+            color: #ffffff;
+        }
+
+        .music-btn {
+            background: rgba(244, 63, 94, 0.2);
+            border: 1px solid var(--primary);
+            color: white;
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+
+        .music-btn:hover {
+            background: var(--primary);
+        }
+
+        /* Main Container */
+        .demo-container {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 500px;
+            margin-top: 5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Interactive Envelope */
+        .sobre-wrapper {
+            cursor: pointer;
+            perspective: 1000px;
+            margin: 2rem 0;
+            transition: transform 0.3s ease;
+        }
+
+        .sobre-wrapper:hover {
+            transform: scale(1.03);
+        }
+
+        .sobre {
+            width: 280px;
+            height: 180px;
+            background: linear-gradient(135deg, #e11d48, #be123c);
+            border-radius: 12px;
+            position: relative;
+            box-shadow: 0 15px 35px rgba(225, 29, 72, 0.35);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sobre-solapa {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-left: 140px solid transparent;
+            border-right: 140px solid transparent;
+            border-top: 100px solid #f43f5e;
+            transform-origin: top;
+            transition: transform 0.6s ease;
+        }
+
+        .sobre.abierto .sobre-solapa {
+            transform: rotateX(180deg);
+            z-index: 0;
+        }
+
+        .sello-corazon {
+            position: absolute;
+            width: 48px;
+            height: 48px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .instruccion {
+            color: #fbcfe8;
+            font-size: 1rem;
+            margin-top: 1rem;
+            animation: bounce 2s infinite;
+            text-align: center;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* Carta Desplegada */
+        .carta-contenido {
+            display: none;
+            background: var(--card-bg);
+            border: 1px solid rgba(244, 63, 94, 0.3);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px var(--primary-glow);
+            backdrop-filter: blur(16px);
+            width: 100%;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .corazon-animado {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            animation: heartbeat 1.2s infinite;
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            14% { transform: scale(1.25); }
+            28% { transform: scale(1); }
+            42% { transform: scale(1.25); }
+            70% { transform: scale(1); }
+        }
+
+        .carta-titulo {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.6rem;
+            color: #f43f5e;
+            margin-bottom: 1rem;
+        }
+
+        .carta-texto {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #e2e8f0;
+            margin-bottom: 1.8rem;
+        }
+
+        .contador-dias {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contador-dias span {
+            display: block;
+            font-size: 0.85rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contador-dias strong {
+            font-size: 1.4rem;
+            color: #2ec4b6;
+        }
+
+        /* Banner de Pedido / CTA */
+        .pedir-banner {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(46, 196, 182, 0.15), rgba(244, 63, 94, 0.15));
+            border: 1px dashed #2ec4b6;
+            border-radius: 16px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .pedir-banner h4 {
+            font-size: 1.1rem;
+            color: #2ec4b6;
+            margin-bottom: 0.5rem;
+        }
+
+        .pedir-banner p {
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            margin-bottom: 1.2rem;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #25d366;
+            color: #000000;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.8rem 1.6rem;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-whatsapp:hover {
+            background: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="canvas-bg"></canvas>
+
+    <header class="top-bar">
+        <a href="tienda.html" class="volver-btn">
+            <span>←</span> Volver a la Tienda
+        </a>
+        <button id="toggle-musica" class="music-btn" aria-label="Reproducir melodía">
+            <span>🎵</span> Melodía Romántica
+        </button>
+    </header>
+
+    <main class="demo-container">
+
+        <!-- Sobre cerrado inicial -->
+        <div class="sobre-wrapper" id="sobre-wrapper">
+            <div class="sobre" id="sobre">
+                <div class="sobre-solapa"></div>
+                <div class="sello-corazon">❤️</div>
+            </div>
+            <p class="instruccion">👉 Toca el sobre para abrir tu sorpresa 💌</p>
+        </div>
+
+        <!-- Carta desplegada con mensaje y efectos -->
+        <div class="carta-contenido" id="carta-contenido">
+            <div class="corazon-animado">💖</div>
+            <h2 class="carta-titulo">Para Mi Persona Favorita</h2>
+            
+            <p class="carta-texto">
+                "Desde que llegaste a mi vida, cada día se siente más brillante y especial. 
+                Esta pequeña página fue hecha solo para recordarte lo mucho que significas para mí. 
+                Gracias por tus sonrisas, por tu apoyo y por ser mi lugar seguro."
+            </p>
+
+            <div class="contador-dias">
+                <span>Tiempo juntos compartiendo momentos</span>
+                <strong id="contador-texto">520 Días de Amor Infinito</strong>
+            </div>
+
+            <div class="pedir-banner">
+                <h4>✨ ¿Quieres una página así para tu persona especial?</h4>
+                <p>Personalizada con tus propias fotos, carta, música favorita y fecha especial, lista para enviar por WhatsApp o enlace privado.</p>
+                <a href="https://wa.me/573148147870?text=Hola%20Sebastian,%20vi%20la%20demo%20interactiva%20de%20la%20carta%20y%20quiero%20personalizar%20una%20para%20mi%20pareja" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
+                    Pedir la mía por WhatsApp 💬
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        // --- 1. Lógica para abrir el sobre ---
+        const sobreWrapper = document.getElementById('sobre-wrapper');
+        const sobre = document.getElementById('sobre');
+        const cartaContenido = document.getElementById('carta-contenido');
+        const botonMusica = document.getElementById('toggle-musica');
+
+        sobreWrapper.addEventListener('click', () => {
+            sobre.classList.add('abierto');
+            iniciarMelodia();
+
+            setTimeout(() => {
+                sobreWrapper.style.display = 'none';
+                cartaContenido.style.display = 'block';
+                lanzarConfetiCorazones();
+            }, 600);
+        });
+
+        // --- 2. Fondo de Partículas / Corazones flotantes (Canvas) ---
+        const canvas = document.getElementById('canvas-bg');
+        const ctx = canvas.getContext('2d');
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        const particulas = [];
+        for (let i = 0; i < 40; i++) {
+            particulas.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                size: Math.random() * 14 + 8,
+                speedY: Math.random() * 1 + 0.5,
+                opacity: Math.random() * 0.6 + 0.2,
+                symbol: Math.random() > 0.4 ? '❤️' : '✨'
+            });
+        }
+
+        function animarParticulas() {
+            ctx.clearRect(0, 0, width, height);
+            particulas.forEach(p => {
+                ctx.globalAlpha = p.opacity;
+                ctx.font = `${p.size}px serif`;
+                ctx.fillText(p.symbol, p.x, p.y);
+                p.y -= p.speedY;
+                if (p.y < -20) {
+                    p.y = height + 20;
+                    p.x = Math.random() * width;
+                }
+            });
+            requestAnimationFrame(animarParticulas);
+        }
+        animarParticulas();
+
+        function lanzarConfetiCorazones() {
+            for (let i = 0; i < 30; i++) {
+                particulas.push({
+                    x: width / 2 + (Math.random() - 0.5) * 200,
+                    y: height / 2 + (Math.random() - 0.5) * 200,
+                    size: Math.random() * 20 + 12,
+                    speedY: Math.random() * 2 + 1,
+                    opacity: 1,
+                    symbol: '💖'
+                });
+            }
+        }
+
+        // --- 3. Sintetizador de audio ambiente romántico (Sin depender de archivos externos) ---
+        let audioCtx = null;
+        let sonidoActivo = false;
+
+        function iniciarMelodia() {
+            if (sonidoActivo) return;
+            try {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                audioCtx = new AudioContext();
+                sonidoActivo = true;
+                botonMusica.innerHTML = '<span>🔊</span> Melodía Activa';
+                tocarNotas();
+            } catch(e) {
+                console.log("Audio Web no disponible:", e);
+            }
+        }
+
+        const notas = [261.63, 329.63, 392.00, 523.25, 440.00, 349.23, 392.00]; // Do, Mi, Sol, Do alto, La, Fa, Sol
+        let notaIdx = 0;
+
+        function tocarNotas() {
+            if (!sonidoActivo || !audioCtx) return;
+            const osc = audioCtx.createOscillator();
+            const gain = audioCtx.createGain();
+
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(notas[notaIdx % notas.length], audioCtx.currentTime);
+
+            gain.gain.setValueAtTime(0.01, audioCtx.currentTime);
+            gain.gain.exponentialRampToValueAtTime(0.12, audioCtx.currentTime + 0.3);
+            gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1.2);
+
+            osc.connect(gain);
+            gain.connect(audioCtx.destination);
+
+            osc.start();
+            osc.stop(audioCtx.currentTime + 1.3);
+
+            notaIdx++;
+            setTimeout(tocarNotas, 1100);
+        }
+
+        botonMusica.addEventListener('click', () => {
+            if (!sonidoActivo) {
+                iniciarMelodia();
+            } else {
+                sonidoActivo = false;
+                if (audioCtx) audioCtx.close();
+                botonMusica.innerHTML = '<span>🔇</span> Melodía Pausada';
+            }
+        });
+    </script>
+</body>
+</html>
+

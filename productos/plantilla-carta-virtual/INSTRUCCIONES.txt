@@ -1,0 +1,71 @@
+====================================================================
+💌 PLANTILLA: CARTA VIRTUAL INTERACTIVA PARA TU PAREJA ❤️
+====================================================================
+¡Gracias por tu compra! Con esta plantilla podrás crear un detalle
+digital único, romántico e interactivo para tu persona favorita.
+
+--------------------------------------------------------------------
+📁 CONTENIDO DEL PAQUETE:
+--------------------------------------------------------------------
+• index.html          -> Archivo principal de la página.
+• css/style.css       -> Estilos, diseño 3D, colores y animaciones.
+• js/script.js        -> Lógica del sobre, corazones flotantes y música.
+• INSTRUCCIONES.txt   -> Esta guía paso a paso.
+
+--------------------------------------------------------------------
+⚡ PASO 1: VER LA PÁGINA EN TU COMPUTADOR
+--------------------------------------------------------------------
+1. Descomprime este archivo .zip en una carpeta de tu preferencia.
+2. Haz doble clic sobre el archivo "index.html".
+3. Se abrirá inmediatamente en tu navegador favorito (Chrome, Edge, Safari, Opera).
+4. Haz clic en el sobre para ver la animación y escuchar la melodía.
+
+--------------------------------------------------------------------
+✏️ PASO 2: PERSONALIZAR CON TUS PROPIAS PALABRAS
+--------------------------------------------------------------------
+Para cambiar los textos, nombres y fechas:
+1. Haz clic derecho sobre el archivo "index.html" y selecciona:
+   "Abrir con" -> "Bloc de notas" (o VS Code, Sublime Text, Notepad++).
+
+2. Busca las siguientes secciones (están comentadas claramente):
+   - Línea 9:  Cambia el título de la pestaña:
+               <title>Para Mi Persona Favorita ❤️</title>
+
+   - Línea 45: Cambia el nombre o saludo:
+               <h2 class="carta-titulo">Para Mi Amor</h2>
+
+   - Línea 48: Escribe tu dedicatoria o carta de amor:
+               <p class="carta-texto">
+                  Desde que llegaste a mi vida...
+               </p>
+
+   - Línea 57: Cambia el contador o fecha de aniversario:
+               <strong id="contador-texto">520 Días Juntos y Contando...</strong>
+
+3. Guarda los cambios con Ctrl + S (o Archivo -> Guardar).
+4. Vuelve a abrir "index.html" en tu navegador para ver tus cambios reflejados.
+
+--------------------------------------------------------------------
+🌐 PASO 3: ¿CÓMO PUBLICARLA EN INTERNET GRATIS PARA ENVIARLA?
+--------------------------------------------------------------------
+Para que tu pareja pueda abrir la página desde su propio celular o computador,
+puedes publicarla en internet en 2 minutos totalmente GRATIS sin saber programar:
+
+OPCIÓN RECOMENDADA (Arrastrar y Soltar):
+1. Entra en tu navegador a: https://app.netlify.com/drop
+2. Inicia sesión o regístrate gratis con tu correo o Google.
+3. Arrastra la carpeta descomprimida (donde están index.html, css y js) hacia la pantalla.
+4. En 5 segundos tendrás un enlace web público generado (ejemplo: mi-carta-de-amor.netlify.app).
+5. ¡Listo! Copia ese enlace y envíaselo por WhatsApp o Instagram a tu persona especial.
+
+OPCIÓN ALTERNATIVA:
+También puedes usar Vercel (https://vercel.com) o GitHub Pages si estás familiarizado con ellos.
+
+--------------------------------------------------------------------
+💡 ¿NECESITAS AYUDA ADICIONAL?
+--------------------------------------------------------------------
+Si tienes dudas con la personalización o quieres un diseño 100% exclusivo
+con más páginas, fotos o música especial, puedes contactar al desarrollador:
+WhatsApp: +57 314 814 7870
+====================================================================
+

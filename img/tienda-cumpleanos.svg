@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgCump" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="flameCump" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#fef08a"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#bgCump)"/>
+  <!-- Confetti bits -->
+  <rect x="80" y="80" width="10" height="10" rx="2" fill="#ec4899" transform="rotate(25 80 80)"/>
+  <rect x="140" y="140" width="8" height="8" rx="2" fill="#38bdf8" transform="rotate(45 140 140)"/>
+  <rect x="500" y="90" width="12" height="8" rx="2" fill="#facc15" transform="rotate(15 500 90)"/>
+  <rect x="470" y="160" width="10" height="10" rx="2" fill="#a855f7" transform="rotate(30 470 160)"/>
+  <circle cx="180" cy="90" r="5" fill="#f43f5e"/>
+  <circle cx="430" cy="110" r="6" fill="#10b981"/>
+  <!-- Cake Base Tier -->
+  <rect x="200" y="230" width="200" height="80" rx="14" fill="#f472b6"/>
+  <path d="M 200 250 Q 225 265 250 250 Q 275 265 300 250 Q 325 265 350 250 Q 375 265 400 250 L 400 230 L 200 230 Z" fill="#ffffff"/>
+  <!-- Cake Top Tier -->
+  <rect x="235" y="165" width="130" height="65" rx="12" fill="#fb7185"/>
+  <path d="M 235 180 Q 255 195 275 180 Q 295 195 315 180 Q 340 195 365 180 L 365 165 L 235 165 Z" fill="#ffffff"/>
+  <!-- Candle -->
+  <rect x="294" y="120" width="12" height="45" rx="4" fill="#38bdf8"/>
+  <line x1="300" y1="120" x2="300" y2="110" stroke="#0f172a" stroke-width="2"/>
+  <!-- Flame -->
+  <path d="M 300 80 C 292 95 290 102 290 108 C 290 114 294 118 300 118 C 306 118 310 114 310 108 C 310 102 308 95 300 80 Z" fill="url(#flameCump)" filter="drop-shadow(0 0 10px #f59e0b)"/>
+  <!-- Plate -->
+  <ellipse cx="300" cy="315" rx="140" ry="16" fill="#e2e8f0"/>
+  <text x="300" y="370" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="16" text-anchor="middle">Cumpleaños Interactivo (Soplar Velas y Música)</text>
+</svg>
+

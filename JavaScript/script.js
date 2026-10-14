@@ -1,181 +1,194 @@
-/* ================= MENU RESPONSIVE ================= */
+/* ==========================================================================
+   PORTAFOLIO SEBASTIAN BOHORQUEZ - SCRIPTS
+   ========================================================================== */
 
-const toggleMenuBtn = document.getElementById("toggle-menu");
-const menuNav = document.querySelector(".menu-nav");
+document.addEventListener("DOMContentLoaded", () => {
+  /* ================= 1. MENÚ RESPONSIVE ================= */
+  const toggleMenuBtn = document.getElementById("toggle-menu");
+  const menuNav = document.querySelector(".menu-nav");
 
-if (toggleMenuBtn && menuNav) {
+  if (toggleMenuBtn && menuNav) {
     toggleMenuBtn.addEventListener("click", () => {
-        menuNav.classList.toggle("open");
+      menuNav.classList.toggle("open");
+      const estaAbierto = menuNav.classList.contains("open");
+      toggleMenuBtn.setAttribute("aria-expanded", estaAbierto ? "true" : "false");
     });
-}
-/**  ================================== INDEX ==================================**/
 
-const formulario = document.querySelector('.formulario');
-
-if(formulario){
-    formulario.addEventListener('submit', function (e) {
-        e.preventDefault();
-
-        const nombre = document.querySelector('input[type="text"]').value;
-        const telefono = document.querySelector('input[type="tel"]').value;
-        const correo = document.querySelector('input[type="email"]').value;
-        const mensaje = document.querySelector('textarea').value;
-
-        if(nombre === '' || telefono === '' || correo === '' || mensaje === ''){
-            alert('Todos los campos son obligatorios');
-            return;
-        }
-
-        if(!correo.includes('@')){
-            alert('El correo no es valido');
-            return;
-        }
-
-        const datosFormulario = {nombre, telefono, correo, mensaje};
-        localStorage.setItem('Contacto', JSON.stringify(datosFormulario));
-
-        alert('Mensaje enviado correctamente');
-        formulario.reset();
+    // Cerrar menú al hacer clic en un enlace (móvil)
+    menuNav.querySelectorAll("a").forEach((enlace) => {
+      enlace.addEventListener("click", () => {
+        menuNav.classList.remove("open");
+        toggleMenuBtn.setAttribute("aria-expanded", "false");
+      });
     });
-}
+  }
 
+  /* ================= 2. ENLACE ACTIVO EN NAVEGACIÓN ================= */
+  const enlaces = document.querySelectorAll(".navegacion-principal a");
+  let paginaActual = window.location.pathname.split("/").pop();
 
-const datosGuardados = localStorage.getItem('Contacto ');
-if (datosGuardados){
-    console.log(JSON.parse(datosGuardados));
-}
+  if (paginaActual === "" || paginaActual === "/") {
+    paginaActual = "index.html";
+  }
 
-// Activar opciones del menu
-
-const enlaces = document.querySelectorAll('.navegacion-principal a');
-
-let paginaActual = window.location.pathname.split("/").pop();
-
-// Si esta vacia, asumimos index.html
-
-if (paginaActual === "" ) {
-    paginaActual = 'index.html';
-}
-
-enlaces.forEach(enlace => {
+  enlaces.forEach((enlace) => {
     const enlaceHref = enlace.getAttribute("href");
+    enlace.classList.remove("activo");
 
-    enlace.classList.remove('activo');
-
-    if(enlaceHref === paginaActual){
-        enlace.classList.add("activo");
+    if (enlaceHref === paginaActual) {
+      enlace.classList.add("activo");
+    } else if (paginaActual === "vigi-bot.html" && enlaceHref === "proyectos.html") {
+      // Si estamos en un detalle de proyecto, marcar la sección Proyectos
+      enlace.classList.add("activo");
+    } else if (paginaActual === "demo-detalle.html" && enlaceHref === "tienda.html") {
+      // Si estamos en la demo de la tienda, marcar la sección Tienda
+      enlace.classList.add("activo");
     }
-});
+  });
 
-/**  ================================== QUIEN SOY ==================================**/
+  /* ================= 3. MODO OSCURO CON PERSISTENCIA ================= */
+  const btnModo = document.getElementById("boton-modo");
+  const modoGuardado = localStorage.getItem("modoOscuro");
 
-// Ver mas / Ver menos (Solo si existe en la pagina)
+  function actualizarTextoBotonModo() {
+    if (!btnModo) return;
+    const esOscuro = document.body.classList.contains("dark-mode");
+    btnModo.textContent = esOscuro ? "Modo Claro" : "Modo Oscuro";
+  }
 
-const botonVermas = document.getElementById("boton-vermas")
-const bioCorta = document.getElementById("bio-corta")
-const bioCompleta = document.getElementById("bio-completa")
+  // Aplicar preferencia guardada
+  if (modoGuardado === "activo") {
+    document.body.classList.add("dark-mode");
+  } else {
+    document.body.classList.remove("dark-mode");
+  }
+  actualizarTextoBotonModo();
 
-if (botonVermas && bioCorta && bioCompleta) {
-    botonVermas.addEventListener("click", () => {
+  if (btnModo) {
+    btnModo.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      const esOscuro = document.body.classList.contains("dark-mode");
 
-        const estaOculto = bioCompleta.classList.contains("oculto");
-
-        if (estaOculto) {
-            bioCompleta.classList.remove("oculto");
-            bioCompleta.classList.add("visible");
-            bioCorta.classList.add("oculto");
-            botonVermas.textContent = "Ver menos";
-        } else {
-            bioCompleta.classList.add("oculto");
-            bioCompleta.classList.remove("visible");
-            bioCorta.classList.remove("oculto");
-            botonVermas.textContent = "Ver más";
-        }
-
-    });
-}
-// Contadores animados (si existen en la pagina)
-const contadores = document.querySelectorAll(".contador");
-
-if (contadores.length > 0) {
-    contadores.forEach( contador => {
-        const valorFinal = Number (contador.dataset.valor);
-        let valorActual = 0;
-
-
-        //Ajustar la velocidad(mas grande = mas rapido)
-        const incremento = Math.ceil(valorFinal / 60);
-
-        const intervalo = setInterval(() => {
-            valorActual += incremento;
-
-            if (valorActual >= valorFinal){
-                contador.textContent = valorFinal;
-                clearInterval(intervalo)
-            } else {
-                contador.textContent = valorActual;
-            }
-        }, 25)
-    })
-}
-
-/* ================= FILTROS PROYECTOS ================= */
-
-const botonesFiltro = document.querySelectorAll(".btn-filtro");
-const proyectos = document.querySelectorAll(".proyecto-card");
-
-botonesFiltro.forEach(boton => {
-
-  boton.addEventListener("click", () => {
-
-    const filtro = boton.dataset.filtro;
-
-    botonesFiltro.forEach(btn => btn.classList.remove("activo"));
-    boton.classList.add("activo");
-
-    proyectos.forEach(proyecto => {
-
-      const categoria = proyecto.dataset.categoria;
-
-      if (filtro === "todos" || filtro === categoria) {
-        proyecto.style.display = "block";
+      if (esOscuro) {
+        localStorage.setItem("modoOscuro", "activo");
       } else {
-        proyecto.style.display = "none";
+        localStorage.setItem("modoOscuro", "inactivo");
+      }
+      actualizarTextoBotonModo();
+    });
+  }
+
+  /* ================= 4. VER MÁS / VER MENOS ================= */
+  const botonVermas = document.getElementById("boton-vermas");
+  const bioCorta = document.getElementById("bio-corta");
+  const bioCompleta = document.getElementById("bio-completa");
+
+  if (botonVermas && bioCorta && bioCompleta) {
+    botonVermas.addEventListener("click", () => {
+      const estaOculto = bioCompleta.classList.contains("oculto");
+
+      if (estaOculto) {
+        bioCompleta.classList.remove("oculto");
+        bioCompleta.classList.add("visible");
+        bioCorta.classList.add("oculto");
+        botonVermas.textContent = "Ver menos";
+      } else {
+        bioCompleta.classList.add("oculto");
+        bioCompleta.classList.remove("visible");
+        bioCorta.classList.remove("oculto");
+        botonVermas.textContent = "Ver más";
+      }
+    });
+  }
+
+  /* ================= 5. FILTROS DE PROYECTOS ================= */
+  const botonesFiltro = document.querySelectorAll(".btn-filtro");
+  const proyectos = document.querySelectorAll(".proyecto-card");
+
+  if (botonesFiltro.length > 0 && proyectos.length > 0) {
+    botonesFiltro.forEach((boton) => {
+      boton.addEventListener("click", () => {
+        const filtro = boton.dataset.filtro;
+
+        botonesFiltro.forEach((btn) => btn.classList.remove("activo"));
+        boton.classList.add("activo");
+
+        proyectos.forEach((proyecto) => {
+          const categoria = proyecto.dataset.categoria;
+
+          if (filtro === "todos" || filtro === categoria) {
+            proyecto.style.display = ""; // Restablece el valor predeterminado del CSS
+          } else {
+            proyecto.style.display = "none";
+          }
+        });
+      });
+    });
+  }
+
+  /* ================= 6. FORMULARIO DE CONTACTO (AJAX) ================= */
+  const formulario = document.querySelector(".formulario");
+
+  if (formulario) {
+    formulario.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById("nombre") ? document.getElementById("nombre").value.trim() : "";
+      const apellidos = document.getElementById("apellidos") ? document.getElementById("apellidos").value.trim() : "";
+      const telefono = document.getElementById("telefono") ? document.getElementById("telefono").value.trim() : "";
+      const email = document.getElementById("email") ? document.getElementById("email").value.trim() : "";
+      const mensaje = document.getElementById("mensaje") ? document.getElementById("mensaje").value.trim() : "";
+
+      if (!nombre || !email || !mensaje) {
+        alert("Por favor completa los campos obligatorios (Nombre, Correo y Mensaje).");
+        return;
       }
 
+      if (!email.includes("@") || !email.includes(".")) {
+        alert("Por favor ingresa un correo electrónico válido.");
+        return;
+      }
+
+      const submitBtn = formulario.querySelector('input[type="submit"]');
+      const textoOriginal = submitBtn ? submitBtn.value : "Enviar";
+      if (submitBtn) {
+        submitBtn.value = "Enviando...";
+        submitBtn.disabled = true;
+      }
+
+      try {
+        const respuesta = await fetch("https://formsubmit.co/ajax/sebastianbohorquez4607@gmail.com", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            Nombre: `${nombre} ${apellidos}`.trim(),
+            Teléfono: telefono,
+            Email: email,
+            Mensaje: mensaje,
+            _subject: `Nuevo mensaje de contacto de ${nombre} (Portafolio Web)`,
+          }),
+        });
+
+        if (respuesta.ok) {
+          alert("¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.");
+          formulario.reset();
+        } else {
+          // Fallback en caso de que FormSubmit requiera activación o devuelva error
+          alert("Tu mensaje fue procesado. Si no recibes respuesta rápida, puedes escribir directamente a: sebastianbohorquez4607@gmail.com");
+          formulario.reset();
+        }
+      } catch (error) {
+        console.error("Error al enviar formulario:", error);
+        alert("Hubo un problema de conexión al enviar el mensaje. Por favor contáctame directamente a: sebastianbohorquez4607@gmail.com");
+      } finally {
+        if (submitBtn) {
+          submitBtn.value = textoOriginal;
+          submitBtn.disabled = false;
+        }
+      }
     });
-
-  });
-
+  }
 });
-
-/* ================= MODO OSCURO CON PERSISTENCIA ================= */
-
-const btnModo = document.getElementById("boton-modo");
-
-// 1) Al cargar, aplicar preferencia guardada
-if (localStorage.getItem("modoOscuro") === "activo") {
-  document.body.classList.add("dark-mode");
-  if (btnModo) btnModo.textContent = "Modo claro";
-}
-
-// 2) Al hacer clic, alternar y guardar
-if (btnModo) {
-  btnModo.addEventListener("click", () => {
-
-    document.body.classList.toggle("dark-mode");
-
-    if (document.body.classList.contains("dark-mode")) {
-      btnModo.textContent = "Modo claro";
-      localStorage.setItem("modoOscuro", "activo");
-    } else {
-      btnModo.textContent = "Modo oscuro";
-      localStorage.removeItem("modoOscuro");
-    }
-
-  });
-}
-
-
-
-/** =============================== VIGI-BOT =============================== */

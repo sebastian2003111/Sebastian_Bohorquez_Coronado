@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgCarta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="sobreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#be123c"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#bgCarta)"/>
+  <!-- Floating Hearts -->
+  <circle cx="100" cy="90" r="16" fill="#f43f5e" opacity="0.3"/>
+  <circle cx="500" cy="110" r="22" fill="#ec4899" opacity="0.3"/>
+  <circle cx="480" cy="290" r="14" fill="#f43f5e" opacity="0.3"/>
+  <!-- Envelope Shadow -->
+  <rect x="150" y="140" width="300" height="190" rx="12" fill="#090d16" opacity="0.5"/>
+  <!-- Letter peaking out -->
+  <rect x="180" y="80" width="240" height="160" rx="8" fill="#ffffff"/>
+  <line x1="205" y1="110" x2="395" y2="110" stroke="#f43f5e" stroke-width="4" stroke-linecap="round"/>
+  <line x1="205" y1="135" x2="370" y2="135" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+  <line x1="205" y1="155" x2="350" y2="155" stroke="#94a3b8" stroke-width="3" stroke-linecap="round"/>
+  <!-- Stamp / Photo Mockup -->
+  <rect x="345" y="170" width="55" height="55" rx="6" fill="#fbcfe8" stroke="#f43f5e" stroke-width="1.5"/>
+  <circle cx="372" cy="195" r="12" fill="#f43f5e"/>
+  <!-- Envelope Body -->
+  <rect x="160" y="150" width="280" height="175" rx="10" fill="url(#sobreGrad)"/>
+  <!-- Envelope Flap -->
+  <polygon points="160,150 300,240 440,150" fill="#e11d48"/>
+  <!-- Heart Seal -->
+  <circle cx="300" cy="240" r="20" fill="#ffffff" filter="drop-shadow(0 4px 6px rgba(0,0,0,0.3))"/>
+  <path d="M 300 233 C 297 227 288 227 288 236 C 288 243 300 251 300 251 C 300 251 312 243 312 236 C 312 227 303 227 300 233 Z" fill="#e11d48"/>
+  <!-- Text -->
+  <text x="300" y="370" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="16" text-anchor="middle">Carta Virtual Interactiva con Música y Fotos</text>
+</svg>
+

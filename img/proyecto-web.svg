@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2ec4b6"/>
+      <stop offset="100%" stop-color="#40c9ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#bg)"/>
+  <!-- Browser Window -->
+  <rect x="50" y="40" width="500" height="320" rx="12" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <rect x="50" y="40" width="500" height="36" rx="12" fill="#1e293b"/>
+  <!-- Dots -->
+  <circle cx="75" cy="58" r="6" fill="#ef4444"/>
+  <circle cx="95" cy="58" r="6" fill="#f59e0b"/>
+  <circle cx="115" cy="58" r="6" fill="#10b981"/>
+  <rect x="145" y="49" width="300" height="18" rx="6" fill="#0f172a"/>
+  <!-- Code / Content Mockup -->
+  <rect x="80" y="105" width="200" height="24" rx="4" fill="url(#accent)"/>
+  <rect x="80" y="145" width="320" height="12" rx="4" fill="#475569"/>
+  <rect x="80" y="167" width="280" height="12" rx="4" fill="#334155"/>
+  <rect x="80" y="200" width="100" height="36" rx="18" fill="#2ec4b6"/>
+  <!-- Code Icon on Right -->
+  <path d="M430 150 L470 190 L430 230" fill="none" stroke="#2ec4b6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M370 150 L330 190 L370 230" fill="none" stroke="#2ec4b6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="410" y1="140" x2="390" y2="240" stroke="#40c9ff" stroke-width="4" stroke-linecap="round"/>
+  <text x="300" y="320" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="16" text-anchor="middle">Portafolio Web Personal HTML5 / CSS3 / JS</text>
+</svg>
+

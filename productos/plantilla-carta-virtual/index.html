@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ========================================================
+         PASO 1: Cambia el título de la pestaña del navegador
+         ======================================================== -->
+    <title>Para Mi Persona Favorita ❤️</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Fondo de corazones flotantes -->
+    <canvas id="canvas-bg"></canvas>
+
+    <header class="top-bar">
+        <button id="toggle-musica" class="music-btn" aria-label="Reproducir melodía">
+            <span>🎵</span> Melodía Romántica
+        </button>
+    </header>
+
+    <main class="demo-container">
+
+        <!-- Sobre cerrado inicial -->
+        <div class="sobre-wrapper" id="sobre-wrapper">
+            <div class="sobre" id="sobre">
+                <div class="sobre-solapa"></div>
+                <div class="sello-corazon">❤️</div>
+            </div>
+            <p class="instruccion">👉 Toca el sobre para abrir tu sorpresa 💌</p>
+        </div>
+
+        <!-- ========================================================
+             PASO 2: Personaliza el contenido de tu carta
+             ======================================================== -->
+        <div class="carta-contenido" id="carta-contenido">
+            <div class="corazon-animado">💖</div>
+            
+            <!-- Cambia el encabezado con el nombre de tu pareja -->
+            <h2 class="carta-titulo">Para Mi Amor</h2>
+            
+            <!-- Escribe aquí tu carta o dedicatoria personal -->
+            <p class="carta-texto">
+                Desde que llegaste a mi vida, cada momento a tu lado se ha vuelto inolvidable. 
+                Esta pequeña página web es para recordarte lo mucho que te amo, lo feliz que me haces
+                y que cada segundo juntos es un regalo maravilloso. ¡Gracias por existir!
+            </p>
+
+            <!-- Cambia el contador de tiempo o mensaje de fecha -->
+            <div class="contador-dias">
+                <span>Nuestra Historia de Amor</span>
+                <strong id="contador-texto">520 Días Juntos y Contando...</strong>
+            </div>
+
+            <p style="font-size: 0.9rem; color: #f43f5e; font-weight: 600;">
+                Con todo mi amor, por siempre tu persona especial ❤️
+            </p>
+        </div>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+

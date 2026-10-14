@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgProp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#bgProp)"/>
+  <!-- Dialogue Modal -->
+  <rect x="120" y="60" width="360" height="260" rx="20" fill="#ffffff" filter="drop-shadow(0 15px 30px rgba(0,0,0,0.5))"/>
+  <!-- Teddy Bear or Cute Icon -->
+  <circle cx="300" cy="115" r="32" fill="#fed7aa"/>
+  <circle cx="280" cy="90" r="12" fill="#ea580c"/>
+  <circle cx="320" cy="90" r="12" fill="#ea580c"/>
+  <circle cx="292" cy="110" r="4" fill="#0f172a"/>
+  <circle cx="308" cy="110" r="4" fill="#0f172a"/>
+  <ellipse cx="300" cy="122" rx="6" ry="4" fill="#ea580c"/>
+  <!-- Question -->
+  <text x="300" y="180" fill="#1e293b" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="22" text-anchor="middle">¿Quieres ser mi novia? ❤️</text>
+  <text x="300" y="205" fill="#64748b" font-family="'Segoe UI', sans-serif" font-size="13" text-anchor="middle">Piénsalo bien... no acepto un no por respuesta 😉</text>
+  <!-- Buttons -->
+  <!-- "SÍ" Button (Big, glowing, green/pink) -->
+  <rect x="160" y="235" width="125" height="50" rx="25" fill="#22c55e" filter="drop-shadow(0 4px 10px rgba(34,197,94,0.4))"/>
+  <text x="222" y="266" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="18" text-anchor="middle">¡SÍ! 😍</text>
+  <!-- "NO" Button (Running away / dodging) -->
+  <rect x="315" y="240" width="105" height="42" rx="21" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1.5"/>
+  <text x="367" y="266" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="15" text-anchor="middle">No 🙈</text>
+  <!-- Dodge Arrow indicator -->
+  <path d="M 430 260 Q 455 240 445 220" fill="none" stroke="#f43f5e" stroke-width="2" stroke-dasharray="3,3"/>
+  <polygon points="440,220 448,220 445,227" fill="#f43f5e"/>
+  <text x="300" y="370" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="16" text-anchor="middle">Propuesta Interactiva Divertida (Botón Escurridizo)</text>
+</svg>
+

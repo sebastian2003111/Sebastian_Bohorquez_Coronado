@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgCarp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#bgCarp)"/>
+  <!-- Dashboard Window -->
+  <rect x="50" y="40" width="500" height="320" rx="12" fill="#111827" stroke="#334155" stroke-width="2"/>
+  <!-- Top Bar -->
+  <rect x="50" y="40" width="500" height="40" rx="12" fill="#1e293b"/>
+  <circle cx="75" cy="60" r="5" fill="#ef4444"/>
+  <circle cx="93" cy="60" r="5" fill="#f59e0b"/>
+  <circle cx="111" cy="60" r="5" fill="#10b981"/>
+  <text x="300" y="65" fill="#e2e8f0" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold" text-anchor="middle">Gestión Integral de Carpintería</text>
+  <!-- Sidebar -->
+  <rect x="60" y="90" width="110" height="255" rx="8" fill="#1e293b"/>
+  <rect x="75" y="110" width="80" height="12" rx="4" fill="#2ec4b6"/>
+  <rect x="75" y="135" width="80" height="10" rx="4" fill="#475569"/>
+  <rect x="75" y="155" width="80" height="10" rx="4" fill="#475569"/>
+  <rect x="75" y="175" width="80" height="10" rx="4" fill="#475569"/>
+  <!-- Metric Cards -->
+  <rect x="190" y="100" width="105" height="70" rx="8" fill="#1e293b" stroke="#2ec4b6" stroke-width="1"/>
+  <text x="205" y="125" fill="#94a3b8" font-size="11" font-family="sans-serif">Inventario</text>
+  <text x="205" y="150" fill="#2ec4b6" font-size="20" font-weight="bold" font-family="sans-serif">148 m²</text>
+  <rect x="310" y="100" width="105" height="70" rx="8" fill="#1e293b" stroke="#40c9ff" stroke-width="1"/>
+  <text x="325" y="125" fill="#94a3b8" font-size="11" font-family="sans-serif">Pedidos</text>
+  <text x="325" y="150" fill="#40c9ff" font-size="20" font-weight="bold" font-family="sans-serif">24 Activos</text>
+  <rect x="430" y="100" width="105" height="70" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1"/>
+  <text x="445" y="125" fill="#94a3b8" font-size="11" font-family="sans-serif">Ventas</text>
+  <text x="445" y="150" fill="#10b981" font-size="20" font-weight="bold" font-family="sans-serif">$ 8.4M</text>
+  <!-- Table Mockup -->
+  <rect x="190" y="190" width="345" height="145" rx="8" fill="#1e293b"/>
+  <rect x="205" y="210" width="315" height="20" rx="4" fill="#334155"/>
+  <rect x="205" y="240" width="315" height="16" rx="4" fill="#111827"/>
+  <rect x="205" y="265" width="315" height="16" rx="4" fill="#111827"/>
+  <rect x="205" y="290" width="315" height="16" rx="4" fill="#111827"/>
+</svg>
+

@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conoce la trayectoria, habilidades y formación de Sebastian Bohorquez Coronado - Estudiante de Ingeniería de Sistemas.">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/normalize.css">
-    <title>Portafolio Sebastian Bohorquez</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Quién Soy | Sebastian Bohorquez Coronado</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1 class="titulo">
             Sebastian Bohorquez Coronado <span>Ing. Sistemas</span>
         </h1>
@@ -28,17 +28,17 @@
 
             <!-- MENÚ -->
             <div class="menu-nav">
-                <a href="index.html" >Inicio</a> 
-                <a href="quien-soy.html" class="activo">Quien Soy</a>
-                <a href="Proyectos.html">Proyectos</a> 
+                <a href="index.html">Inicio</a> 
+                <a href="quien-soy.html" class="activo">Quién Soy</a>
+                <a href="proyectos.html">Proyectos</a> 
+                <a href="tienda.html">Tienda</a> 
                 <a href="contacto.html">Contacto</a>
-                <button class="boton-modo" id="boton-modo">Modo Claro</button>
+                <button class="boton-modo" id="boton-modo" aria-label="Cambiar tema claro u oscuro">Modo Oscuro</button>
             </div>
             <!-- BOTÓN HAMBURGUESA -->
-            <div class="toggle" id="toggle-menu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#2EC4B6" class="icon-barra"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 6a1 1 0 0 1 -1 1h-16a1 1 0 1 1 0 -2h16a1 1 0 0 1 1 1" /><path d="M21 12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" /><path d="M21 18a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" /></svg>
-
-            </div>
+            <button class="toggle" id="toggle-menu" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#2EC4B6" class="icon-barra"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 6a1 1 0 0 1 -1 1h-16a1 1 0 1 1 0 -2h16a1 1 0 0 1 1 1" /><path d="M21 12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" /><path d="M21 18a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" /></svg>
+            </button>
 
         </nav>
     </div>
@@ -47,48 +47,45 @@
         <div class="contenido-hero">
           <h1>SEBASTIAN BOHORQUEZ</h1>
         </div>
-        
     </section>
 
-    
+    <!-- Galería Acordeón -->
     <section class="section">
-        <img class="fotomia" src="img_mias/foto_negro1.png" alt="foto_negro1">
-        <img class="fotomia" src="img_mias/foto_blanco2.png" alt="foto_blanco2">
-        <img class="fotomia" src="img_mias/foto_negro2.png" alt="foto_negro2">
-        <img class="fotomia" src="img_mias/foto_blanco1.png" alt="foto_blanco1">
-    
+        <img class="fotomia" src="img_mias/foto_negro1.png" alt="Fotografía de Sebastian Bohorquez estilo oscuro 1">
+        <img class="fotomia" src="img_mias/foto_blanco2.png" alt="Fotografía de Sebastian Bohorquez estilo claro 2">
+        <img class="fotomia" src="img_mias/foto_negro2.png" alt="Fotografía de Sebastian Bohorquez estilo oscuro 2">
+        <img class="fotomia" src="img_mias/foto_blanco1.png" alt="Fotografía de Sebastian Bohorquez estilo claro 1">
     </section>
-    
     
     <main class="contenedor sombra">
        <section class="quien-soy-section">
             <div class="perfil-container">
                 <div class="perfil-imagen">
-                    <img src="img/FotoMia2.png" alt="Sebastian Bohorquez Coronado" class="perfil-foto">
+                    <img src="img/FotoMia2.png" alt="Retrato de Sebastian Bohorquez Coronado" class="perfil-foto">
                 </div>
                 <div class="perfil-info">
-                <h2>Sobre Mí</h2>
-                <p id="bio-corta" class="visible">
-                    Estudiante de Ingeniería de Sistemas 💻
-                    Apasionado por la programación en Java y el desarrollo web 🌐
-                    Amante de la lógica, los algoritmos y la tecnología 🚀
-                    En constante aprendizaje.
-                </p>
+                    <h2>Sobre Mí</h2>
+                    <p id="bio-corta" class="visible">
+                        Estudiante de Ingeniería de Sistemas 💻<br>
+                        Apasionado por la programación en Java y el desarrollo web 🌐<br>
+                        Amante de la lógica, los algoritmos y la robótica 🚀<br>
+                        En constante aprendizaje y evolución técnica.
+                    </p>
 
-                <p id="bio-completa"  class="oculto">
-                    Soy estudiante de Ingeniería de Sistemas, apasionado por la programación y el desarrollo de soluciones tecnológicas orientadas a resolver problemas reales.
-                    También he trabajado en el diseño y desarrollo de páginas web utilizando HTML y CSS, enfocándome en interfaces organizadas, funcionales y responsivas. 
-                    <br> 
-                    <br>
-                    Me interesa comprender la lógica detrás de cada algoritmo, fortalecer mis bases en programación orientada a objetos y seguir creciendo como desarrollador. <br>
-                    Soy disciplinado, constante y comprometido con cada proyecto académico, combinando el aprendizaje técnico con la capacidad de explicar y comunicar soluciones de manera clara.
-                </p>
+                    <p id="bio-completa" class="oculto">
+                        Soy estudiante de Ingeniería de Sistemas, apasionado por la programación y el desarrollo de soluciones tecnológicas orientadas a resolver problemas reales.
+                        También he trabajado en el diseño y desarrollo de páginas web utilizando HTML, CSS y JavaScript, enfocándome en interfaces organizadas, funcionales y responsivas. 
+                        <br><br>
+                        Me interesa comprender la lógica detrás de cada algoritmo, fortalecer mis bases en programación orientada a objetos y seguir creciendo como desarrollador.
+                        Soy disciplinado, constante y comprometido con cada proyecto, combinando el rigor técnico con la capacidad de explicar y comunicar soluciones de manera clara.
+                    </p>
 
-               <button id="boton-vermas"  class="boton"> Ver mas</button>
-            </div> <!-- cierre de perfil-container -->
+                    <button id="boton-vermas" class="boton" aria-label="Ver más detalles de mi biografía">Ver más</button>
+                </div>
+            </div>
         </section>
 
-        <div class="informacion-personal">
+        <section class="informacion-personal">
             <h3>Información Personal</h3>
             <ul class="info-list">
                 <li>
@@ -99,12 +96,12 @@
                 <li>
                     <span class="icono">🎓</span>
                     <span class="label">Estudios:</span>
-                    <span class="value">Ingeniería de Sistemas / Robotica</span>
+                    <span class="value">Ingeniería de Sistemas</span>
                 </li>
                 <li>
                     <span class="icono">💻</span>
                     <span class="label">Especialidad:</span>
-                    <span class="value">Desarrollo Web y Videojuegos</span>
+                    <span class="value">Desarrollo Web, Java y Robótica</span>
                 </li>
                 <li>
                     <span class="icono">📧</span>
@@ -112,22 +109,46 @@
                     <span class="value">sebastianbohorquez4607@gmail.com</span>
                 </li>
             </ul>
-        </div>
-    
+        </section>
 
-
-        <div class="habilidades-section">
-            <h3>Mis Habilidades</h3>
+        <section class="habilidades-section">
+            <h3>Mis Habilidades Técnicas</h3>
             <div class="habilidades-grid">
                 <div class="habilidad-card">
                     <div class="habilidad-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <polyline points="16 18 22 12 16 6"></polyline>
                             <polyline points="8 6 2 12 8 18"></polyline>
                         </svg>
                     </div>
                     <h4>Desarrollo Web</h4>
-                    <p>HTML5, CSS3, JavaScript.</p>
+                    <p>HTML5 semántico, CSS3 moderno, JavaScript.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%"></div>
+                    </div>
+                </div>
+
+                <div class="habilidad-card">
+                    <div class="habilidad-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h4>Interfaces de Usuario</h4>
+                    <p>Java Swing, diseño UI y maquetación responsiva.</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%"></div>
+                    </div>
+                </div>
+
+                <div class="habilidad-card">
+                    <div class="habilidad-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="#2EC4B6" class="icono icon-tabler icons-tabler-filled icon-tabler-database"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 15.731c1.968 1.507 5.234 2.269 9 2.269c3.76 0 7.025 -.76 9 -2.252v2.252c0 2.425 -3.895 3.936 -8.693 3.998l-.307 .002c-4.938 0 -9 -1.523 -9 -4z" /><path d="M3 9.731c1.968 1.507 5.234 2.269 9 2.269c3.76 0 7.025 -.76 9 -2.252v2.252c0 2.477 -4.062 4 -9 4c-4.798 0 -8.77 -1.438 -8.979 -3.795l-.016 -.101l-.005 -.104z" /><path d="M12 2c1.041 0 2.044 .068 2.977 .198l.469 .071q .84 .14 1.586 .348l.44 .131l.075 .024a11 11 0 0 1 .805 .3l.199 .086q .535 .242 .967 .53q .165 .11 .313 .225a3.8 3.8 0 0 1 .669 .668l.091 .128q .07 .105 .129 .211l.07 .139q .163 .35 .2 .73l.01 .211c0 2.477 -4.062 4 -9 4c-4.798 0 -8.77 -1.438 -8.979 -3.795a1 1 0 0 1 -.021 -.205l.005 -.104l.016 -.1c.205 -2.306 4.01 -3.733 8.667 -3.794z" /></svg>
+                    </div>
+                    <h4>Bases de Datos</h4>
+                    <p>Modelado relacional SQL, consultas y arquitectura lógica.</p>
                     <div class="progress-bar">
                         <div class="progress" style="width: 75%"></div>
                     </div>
@@ -135,44 +156,18 @@
 
                 <div class="habilidad-card">
                     <div class="habilidad-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
+                       <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icono icon-tabler icons-tabler-outline icon-tabler-cube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 16.008v-8.018a1.98 1.98 0 0 0 -1 -1.717l-7 -4.008a2.016 2.016 0 0 0 -2 0l-7 4.008c-.619 .355 -1 1.01 -1 1.718v8.018c0 .709 .381 1.363 1 1.717l7 4.008a2.016 2.016 0 0 0 2 0l7 -4.008c.619 -.355 1 -1.01 1 -1.718" /><path d="M12 22v-10" /><path d="M12 12l8.73 -5.04" /><path d="M3.27 6.96l8.73 5.04" /></svg>
                     </div>
-                    <h4>Desarrollo de Interfaces</h4>
-                    <p>Java Swing, diseño UI, aplicaciones de escritorio.</p>
+                    <h4>Programación POO</h4>
+                    <p>Java, estructuras de datos, algoritmos y lógica.</p>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 60%"></div>
+                        <div class="progress" style="width: 75%"></div>
                     </div>
                 </div>
-
-                <div class="habilidad-card">
-                    <div class="habilidad-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#2EC4B6" class="icono icon-tabler icons-tabler-filled icon-tabler-database"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 15.731c1.968 1.507 5.234 2.269 9 2.269c3.76 0 7.025 -.76 9 -2.252v2.252c0 2.425 -3.895 3.936 -8.693 3.998l-.307 .002c-4.938 0 -9 -1.523 -9 -4z" /><path d="M3 9.731c1.968 1.507 5.234 2.269 9 2.269c3.76 0 7.025 -.76 9 -2.252v2.252c0 2.477 -4.062 4 -9 4c-4.798 0 -8.77 -1.438 -8.979 -3.795l-.016 -.101l-.005 -.104z" /><path d="M12 2c1.041 0 2.044 .068 2.977 .198l.469 .071q .84 .14 1.586 .348l.44 .131l.075 .024a11 11 0 0 1 .805 .3l.199 .086q .535 .242 .967 .53q .165 .11 .313 .225a3.8 3.8 0 0 1 .669 .668l.091 .128q .07 .105 .129 .211l.07 .139q .163 .35 .2 .73l.01 .211c0 2.477 -4.062 4 -9 4c-4.798 0 -8.77 -1.438 -8.979 -3.795a1 1 0 0 1 -.021 -.205l.005 -.104l.016 -.1c.205 -2.306 4.01 -3.733 8.667 -3.794z" /></svg>
-                    </div>
-                    <h4>Estructuras de Datos</h4>
-                    <p>Listas, Pilas, Colas, Árboles, Recursividad.</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 65%"></div>
-                    </div>
-                </div>
-
-                    <div class="habilidad-card">
-                        <div class="habilidad-icon">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2EC4B6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icono icon-tabler icons-tabler-outline icon-tabler-cube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 16.008v-8.018a1.98 1.98 0 0 0 -1 -1.717l-7 -4.008a2.016 2.016 0 0 0 -2 0l-7 4.008c-.619 .355 -1 1.01 -1 1.718v8.018c0 .709 .381 1.363 1 1.717l7 4.008a2.016 2.016 0 0 0 2 0l7 -4.008c.619 -.355 1 -1.01 1 -1.718" /><path d="M12 22v-10" /><path d="M12 12l8.73 -5.04" /><path d="M3.27 6.96l8.73 5.04" /></svg>
-                        </div>
-                        <h4>Programación Orientada a Objetos</h4>
-                        <p>Java, estructuras de datos, algoritmos, recursividad</p>
-                        <div class="progress-bar">
-                            <div class="progress" style="width: 70%"></div>
-                        </div>
-                    </div>
             </div>
-        </div>
+        </section>
 
-        <div class="intereses-section">
+        <section class="intereses-section">
             <h3>Mis Intereses</h3>
             <div class="intereses-grid">
                 <div class="interes-item">
@@ -205,46 +200,44 @@
                 </div>
                 <div class="interes-item">
                     <span class="interes-icon">🤖</span>
-                    <span class="interes-text">Robotica</span>
+                    <span class="interes-text">Robótica</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="frase-section">
+        <section class="frase-section">
             <blockquote>
                 "La tecnología es mejor cuando une a las personas"
             </blockquote>
-            <cite>- Matt Mullenweg</cite>
-        </div>
+            <cite>— Matt Mullenweg</cite>
         </section>
         
-        <h3>Redes Sociales</h3>       
+        <h2>Mis Redes Sociales</h2>       
         <div class="redes-sociales">
-
-                <!-- From Uiverse.io by vinodjangid07 --> 
-                <div class="card-redes">
-                <a href="#" class="socialContainer containerOne">
+            <div class="card-redes">
+                <a href="https://instagram.com/sebastian_bohorquez11?cplk=MXIxbGdwb3F1bmps" target="_blank" rel="noopener noreferrer" class="socialContainer containerOne" aria-label="Visitar perfil de Instagram">
                     <svg class="socialSvg instagramSvg" viewBox="0 0 16 16"> <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path> </svg>
                 </a>
                 
-                <a href="#" class="socialContainer containerTwo">
-                    <svg class="socialSvg twitterSvg" viewBox="0 0 16 16"> <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path> </svg>              </a>
-                    
-                <a href="#" class="socialContainer containerThree">
+                <a href="https://x.com/SebastianBC0311" target="_blank" rel="noopener noreferrer" class="socialContainer containerTwo" aria-label="Visitar perfil de X Twitter">
+                    <svg class="socialSvg twitterSvg" viewBox="0 0 16 16"> <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path> </svg>
+                </a>
+                
+                <a href="https://www.linkedin.com/in/sebastian-bohórquez-a0a032349" target="_blank" rel="noopener noreferrer" class="socialContainer containerThree" aria-label="Visitar perfil de LinkedIn">
                     <svg class="socialSvg linkdinSvg" viewBox="0 0 448 512"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg>
                 </a>
                 
-                <a href="#" class="socialContainer containerFour">
+                <a href="https://wa.me/573148147870" target="_blank" rel="noopener noreferrer" class="socialContainer containerFour" aria-label="Enviar mensaje por WhatsApp">
                     <svg class="socialSvg whatsappSvg" viewBox="0 0 16 16"> <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path> </svg>
                 </a>
-                </div>             
-            </div>
+            </div>             
+        </div>
 
     </main>
     
     <footer class="footer">
-        <p>Todos los derechos reservados. Sebastian Bohorquez Coronado - Ingeniero de Sistemas</p>
-        <p>© 2026 Blod Personal — Marca personal</p>
+        <p>Todos los derechos reservados. Sebastian Bohorquez Coronado — Ingeniero de Sistemas</p>
+        <p>© 2026 Blog Personal — Marca personal</p>
     </footer>
 
     <script src="JavaScript/script.js"></script>

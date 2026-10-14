@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgHw" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="cardHw" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="400" rx="16" fill="url(#bgHw)"/>
+  <!-- Blister Card (Collectible Packaging) -->
+  <rect x="180" y="45" width="240" height="300" rx="14" fill="url(#cardHw)" stroke="#38bdf8" stroke-width="2"/>
+  <!-- Hanging punch hole -->
+  <rect x="280" y="55" width="40" height="12" rx="6" fill="#0f172a"/>
+  <!-- Logo Banner -->
+  <path d="M 205 95 Q 260 80 300 95 Q 350 80 395 95 L 385 125 Q 345 110 300 120 Q 255 110 215 125 Z" fill="url(#flame)"/>
+  <text x="300" y="112" fill="#ffffff" font-family="'Impact', sans-serif" font-style="italic" font-size="20" text-anchor="middle">LOVE WHEELS</text>
+  <!-- Plastic Bubble (Blister Pack) -->
+  <rect x="205" y="145" width="190" height="150" rx="12" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-width="2"/>
+  <!-- Car Graphic inside bubble -->
+  <path d="M 235 235 L 260 205 L 330 205 L 365 235 L 375 245 L 225 245 Z" fill="#ef4444"/>
+  <!-- Windows -->
+  <polygon points="268,210 322,210 316,228 262,228" fill="#38bdf8" opacity="0.8"/>
+  <!-- Wheels -->
+  <circle cx="260" cy="245" r="14" fill="#18181b"/>
+  <circle cx="260" cy="245" r="6" fill="#fbbf24"/>
+  <circle cx="340" cy="245" r="14" fill="#18181b"/>
+  <circle cx="340" cy="245" r="6" fill="#fbbf24"/>
+  <!-- Specifications -->
+  <rect x="205" y="305" width="190" height="26" rx="6" fill="#0f172a"/>
+  <text x="300" y="322" fill="#facc15" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="12" text-anchor="middle">EDICIÓN ESPECIAL: MI AMOR</text>
+  <text x="300" y="375" fill="#f8fafc" font-family="'Segoe UI', sans-serif" font-weight="bold" font-size="16" text-anchor="middle">Tarjeta Interactiva Coleccionable Hot Wheels</text>
+</svg>
+

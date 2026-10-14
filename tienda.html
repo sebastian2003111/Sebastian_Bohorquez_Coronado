@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tienda de Detalles Web Interactivos de Sebastian Bohorquez. Cartas virtuales, flores amarillas, tarjetas personalizadas y animaciones con música para fechas especiales.">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tienda de Detalles Digitales | Sebastian Bohorquez</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="titulo">
+            Sebastian Bohorquez Coronado <span>Tienda de Detalles Digitales</span>
+        </h1>
+    </header>
+    
+    <div class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+
+            <!-- MENÚ -->
+            <div class="menu-nav">
+                <a href="index.html">Inicio</a> 
+                <a href="quien-soy.html">Quién Soy</a>
+                <a href="proyectos.html">Proyectos</a> 
+                <a href="tienda.html" class="activo">Tienda</a> 
+                <a href="contacto.html">Contacto</a>
+                <button class="boton-modo" id="boton-modo" aria-label="Cambiar tema claro u oscuro">Modo Oscuro</button>
+            </div>
+
+            <!-- BOTÓN HAMBURGUESA -->
+            <button class="toggle" id="toggle-menu" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#2EC4B6" class="icon-barra"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 6a1 1 0 0 1 -1 1h-16a1 1 0 1 1 0 -2h16a1 1 0 0 1 1 1" /><path d="M21 12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" /><path d="M21 18a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" /></svg>
+            </button>
+
+        </nav>
+    </div>
+
+    <!-- Hero de la Tienda -->
+    <section class="hero-tienda">
+        <div class="contenido-hero-tienda">
+            <span class="badge-tienda">✨ Sorprende con un detalle único</span>
+            <h1>Páginas Web Interactivas para Parejas y Fechas Especiales</h1>
+            <p>
+                Regala una experiencia digital inolvidable: cartas con música, flores que nunca se marchitan,
+                juegos interactivos y tarjetas personalizadas listas para enviar por WhatsApp.
+            </p>
+            <div class="ventajas-grid">
+                <div class="ventaja-item">⚡ Entrega rápida en 24h</div>
+                <div class="ventaja-item">🎵 Con tu canción favorita</div>
+                <div class="ventaja-item">📱 100% Adaptable a celulares</div>
+                <div class="ventaja-item">🔒 Enlace privado personalizado</div>
+            </div>
+        </div>
+    </section>
+    
+    <main class="contenedor sombra">
+
+        <section class="intro-tienda">         
+            <h2>Catálogo de Detalles</h2>
+            <p class="parrafo-proyecto">
+                Elige tu diseño favorito, mira la demostración interactiva en vivo y solicita la personalización
+                con tus propias fotos, textos y canción directamente por WhatsApp.
+            </p>
+        </section>
+
+        <!-- Filtros de la Tienda -->
+        <div class="filtros">
+            <button class="btn-filtro activo" data-filtro="todos">Todos</button>
+            <button class="btn-filtro" data-filtro="amor">Amor & Parejas</button>
+            <button class="btn-filtro" data-filtro="flores">Flores Digitales</button>
+            <button class="btn-filtro" data-filtro="ocasiones">Fechas Especiales</button>
+        </div>
+
+        <section class="proyectos-grid">
+
+            <!-- 1. Carta Virtual -->
+            <div class="proyecto-card tienda-card" data-categoria="amor">
+                <div class="card-badge">Más Popular 🔥</div>
+                <img src="img/tienda-carta.svg" alt="Carta virtual romántica interactiva con sobre">
+                <h3>Carta Virtual con Música y Fotos</h3>
+                <div class="precio-tag">$20.000 COP <span>/ $5 USD</span></div>
+                <p>Sobre animado que se abre al tocarlo, revelando una dedicatoria romántica, fotos de la pareja, música de fondo y contador de tiempo juntos.</p>
+                <div class="acciones-proyecto">
+                    <a href="demo-detalle.html" class="btn-proyecto-secundario">Ver Demo en Vivo 👁️</a>
+                    <a href="https://wa.me/573148147870?text=Hola%20Sebastian,%20quiero%20personalizar%20la%20Carta%20Virtual%20Interactiva" target="_blank" rel="noopener noreferrer" class="btn-proyecto btn-whatsapp-card">Pedir por WhatsApp 💬</a>
+                </div>
+            </div>
+
+            <!-- 2. Flores Amarillas -->
+            <div class="proyecto-card tienda-card" data-categoria="flores">
+                <div class="card-badge">Tendencia Viral 🌻</div>
+                <img src="img/tienda-flores.svg" alt="Ramo de flores amarillas digitales interactivas">
+                <h3>Flores Amarillas / Ramo Digital</h3>
+                <div class="precio-tag">$18.000 COP <span>/ $4.5 USD</span></div>
+                <p>Animación mágica de flores amarillas y girasoles que florecen en pantalla con lluvia de pétalos dorados, dedicatoria especial y canción de fondo.</p>
+                <div class="acciones-proyecto">
+                    <a href="https://wa.me/573148147870?text=Hola%20Sebastian,%20quiero%20el%20Ramo%20de%20Flores%20Digitales%20personalizado" target="_blank" rel="noopener noreferrer" class="btn-proyecto btn-whatsapp-card">Pedir por WhatsApp 💬</a>
+                </div>
+            </div>
+
+            <!-- 3. Tarjeta Hot Wheels -->
+            <div class="proyecto-card tienda-card" data-categoria="amor">
+                <img src="img/tienda-hotwheels.svg" alt="Tarjeta coleccionable Hot Wheels de pareja">
+                <h3>Tarjeta Coleccionable Hot Wheels</h3>
+                <div class="precio-tag">$22.000 COP <span>/ $5.5 USD</span></div>
+                <p>Diseño temático estilo empaque coleccionable con la foto de tu pareja o ambos como un 'auto de edición limitada', con especificaciones de amor.</p>
+                <div class="acciones-proyecto">
+                    <a href="https://wa.me/573148147870?text=Hola%20Sebastian,%20quiero%20la%20Tarjeta%20Hot%20Wheels%20para%20mi%20pareja" target="_blank" rel="noopener noreferrer" class="btn-proyecto btn-whatsapp-card">Pedir por WhatsApp 💬</a>
+                </div>
+            </div>
+
+            <!-- 4. Propuesta Divertida -->
+            <div class="proyecto-card tienda-card" data-categoria="amor">
+                <img src="img/tienda-propuesta.svg" alt="Propuesta interactiva con botón que se escapa">
+                <h3>Propuesta "¿Quieres ser mi Novia/o?"</h3>
+                <div class="precio-tag">$18.000 COP <span>/ $4.5 USD</span></div>
+                <p>Página interactiva divertida donde el botón 'No' se escapa por la pantalla cuando intentan presionarlo. Al tocar 'Sí', se activa una fiesta de confeti.</p>
+                <div class="acciones-proyecto">
+                    <a href="https://wa.me/573148147870?text=Hola%20Sebastian,%20quiero%20la%20Propuesta%20Interactiva%20personalizada" target="_blank" rel="noopener noreferrer" class="btn-proyecto btn-whatsapp-card">Pedir por WhatsApp 💬</a>
+                </div>
+            </div>
+
+            <!-- 5. Cumpleaños Interactivo -->
+            <div class="proyecto-card tienda-card" data-categoria="ocasiones">
+                <img src="img/tienda-cumpleanos.svg" alt="Pastel de cumpleaños virtual con velas que se apagan">
+                <h3>Pastel de Cumpleaños Interactivo</h3>
+                <div class="precio-tag">$20.000 COP <span>/ $5 USD</span></div>
+                <p>Pastel con velas que se apagan al soplarlas o tocarlas, fotos del cumpleañero, lluvia de confeti y canción de feliz cumpleaños.</p>
+                <div class="acciones-proyecto">
+                    <a href="https://wa.me/573148147870?text=Hola%20Sebastian,%20quiero%20la%20Tarjeta%20de%20Cumplea%C3%B1os%20Interactiva" target="_blank" rel="noopener noreferrer" class="btn-proyecto btn-whatsapp-card">Pedir por WhatsApp 💬</a>
+                </div>
+            </div>
+
+            <!-- 6. Corazón en Código -->
+            <div class="proyecto-card tienda-card" data-categoria="ocasiones">
+                <img src="img/tienda-corazon.svg" alt="Corazón de partículas animadas en código">
+                <h3>Corazón de Código y Partículas</h3>
+                <div class="precio-tag">$15.000 COP <span>/ $4 USD</span></div>
+                <p>Animación estilo hacker/programador de un corazón de partículas brillantes que late al compás de la música con dedicatoria personal.</p>
+                <div class="acciones-proyecto">
+                    <a href="https://wa.me/573148147870?text=Hola%20Sebastian,%20quiero%20el%20Coraz%C3%B3n%20en%20C%C3%B3digo%20personalizado" target="_blank" rel="noopener noreferrer" class="btn-proyecto btn-whatsapp-card">Pedir por WhatsApp 💬</a>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Cómo Funciona el Proceso -->
+        <section class="como-funciona-seccion">
+            <h2>¿Cómo es el Proceso de Pedido?</h2>
+            <div class="pasos-grid">
+                <div class="paso-card">
+                    <div class="paso-num">1</div>
+                    <h4>Elige tu Diseño</h4>
+                    <p>Escoge la plantilla que más te guste del catálogo o pídeme una idea personalizada.</p>
+                </div>
+                <div class="paso-card">
+                    <div class="paso-num">2</div>
+                    <h4>Envíame tus Datos</h4>
+                    <p>Por WhatsApp me envías tu mensaje, fotos, fecha especial y la canción que deseas incluir.</p>
+                </div>
+                <div class="paso-card">
+                    <div class="paso-num">3</div>
+                    <h4>¡Recibe tu Enlace!</h4>
+                    <p>En menos de 24h recibes un link privado listo para compartir y sorprender a esa persona.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Directo -->
+        <section class="cta-tienda">
+            <h2>¿Tienes una idea en mente y quieres un diseño personalizado?</h2>
+            <p>Escríbeme directamente y creamos un detalle interactivo único a tu gusto.</p>
+            <a href="https://wa.me/573148147870?text=Hola%20Sebastian,%20tengo%20una%20idea%20para%20un%20dise%C3%B1o%20web%20personalizado" target="_blank" rel="noopener noreferrer" class="boton btn-cta-wpp">
+                Hablar directamente por WhatsApp 💬
+            </a>
+        </section>
+
+    </main>
+    
+    <footer class="footer">
+        <p>Todos los derechos reservados. Sebastian Bohorquez Coronado — Ingeniero de Sistemas</p>
+        <p>© 2026 Blog Personal — Marca personal</p>
+    </footer>
+
+    <script src="JavaScript/script.js"></script>
+
+</body>
+</html>
+

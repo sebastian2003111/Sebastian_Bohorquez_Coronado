@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyectos destacados de desarrollo web, robótica y software por Sebastian Bohorquez Coronado.">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-
-    <link rel="stylesheet" href="css/style.css">
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="css/normalize.css">
-    <title>Portafolio Sebastian Bohorquez</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Proyectos | Sebastian Bohorquez Coronado</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1 class="titulo">
             Sebastian Bohorquez Coronado <span>Ing. Sistemas</span>
         </h1>
@@ -28,17 +28,17 @@
 
             <!-- MENÚ -->
             <div class="menu-nav">
-                <a href="index.html" >Inicio</a> 
-                <a href="quien-soy.html">Quien Soy</a>
-                <a href="Proyectos.html">Proyectos</a> 
+                <a href="index.html">Inicio</a> 
+                <a href="quien-soy.html">Quién Soy</a>
+                <a href="proyectos.html" class="activo">Proyectos</a> 
+                <a href="tienda.html">Tienda</a> 
                 <a href="contacto.html">Contacto</a>
-                <button class="boton-modo" id="boton-modo">Modo Claro</button>
+                <button class="boton-modo" id="boton-modo" aria-label="Cambiar tema claro u oscuro">Modo Oscuro</button>
             </div>
             <!-- BOTÓN HAMBURGUESA -->
-            <div class="toggle" id="toggle-menu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="#2EC4B6" class="icon-barra"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 6a1 1 0 0 1 -1 1h-16a1 1 0 1 1 0 -2h16a1 1 0 0 1 1 1" /><path d="M21 12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" /><path d="M21 18a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" /></svg>
-
-            </div>
+            <button class="toggle" id="toggle-menu" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#2EC4B6" class="icon-barra"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 6a1 1 0 0 1 -1 1h-16a1 1 0 1 1 0 -2h16a1 1 0 0 1 1 1" /><path d="M21 12a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" /><path d="M21 18a1 1 0 0 1 -1 1h-16a1 1 0 0 1 0 -2h16a1 1 0 0 1 1 1" /></svg>
+            </button>
 
         </nav>
     </div>
@@ -46,11 +46,11 @@
     <section class="hero">
         <div class="contenido-hero">
             <div class="ubicacion">
-                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="#ffffff" class="icono icon-tabler icons-tabler-filled icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6" /></svg>
-                <p>La Ye - Sahagun, Cordoba</p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="#2EC4B6" class="icono icon-tabler icons-tabler-filled icon-tabler-map-pin"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 4.636a9 9 0 0 1 .203 12.519l-.203 .21l-4.243 4.242a3 3 0 0 1 -4.097 .135l-.144 -.135l-4.244 -4.243a9 9 0 0 1 12.728 -12.728zm-6.364 3.364a3 3 0 1 0 0 6a3 3 0 0 0 0 -6" /></svg>
+                <p>La Ye - Sahagún, Córdoba</p>
             </div> 
-            <a class="boton" href="#">Contactar</a>
-        </div> <!-- Aqui se termina el contenido hero -->
+            <a class="boton" href="contacto.html">Contactar</a>
+        </div>
     </section>
     
     <main class="contenedor sombra">
@@ -59,77 +59,79 @@
             <h2>Mis Proyectos</h2>
             <p class="parrafo-proyecto">
                 En esta sección encontrarás algunos de los proyectos en los que he trabajado,
-                relacionados con robótica, desarrollo web y tecnología.
+                relacionados con robótica, desarrollo web, modelado y programación en software.
             </p>
         </section>
 
+        <!-- Filtros interactivos -->
         <div class="filtros">
             <button class="btn-filtro activo" data-filtro="todos">Todos</button>
             <button class="btn-filtro" data-filtro="robotica">Robótica</button>
             <button class="btn-filtro" data-filtro="desarrolloWeb">Desarrollo Web</button>
-            <button class="btn-filtro" data-filtro="AnimacionesWeb">Animaciones Web</button>
-            <button class="btn-filtro" data-filtro="animacionesPython">Animaciones en Python</button>
-            <button class="btn-filtro" data-filtro="investigacion">Investigación</button>
+            <button class="btn-filtro" data-filtro="animacionesPython">Python</button>
         </div>
 
         <section class="proyectos-grid">
 
-            <!-- Robotica -->
-
+            <!-- Robotica: VIGI-BOT -->
             <div class="proyecto-card" data-categoria="robotica">
-                <img src="img/proyecto1.jpg" alt="">
+                <img src="img_VIGI-BOT/VIGI-BOT.jpg" alt="Robot móvil de vigilancia VIGI-BOT">
                 <h3>Proyecto VIGI-BOT</h3>
-                <p>Robot movil de vigilancia desarrollado con Arduino.</p>
-                <a href="vigi-bot.html" class="btn-proyecto">Ver proyecto</a>
-                <a href="#" class="btn-proyecto">Comprar</a>
-            </div>
-
-            <!-- Desarrollo Web -->
-            <div class="proyecto-card" data-categoria="desarrolloWeb">
-                <img src="img/proyecto2.jpg" alt="">
-                <h3>Portaforio Web</h3>
-                <p>Sitio web personal desarrollado con HTML, CSS y JS.</p>
-                <a href="#" class="btn-proyecto">Ver proyecto</a>
-                <a href="#" class="btn-proyecto">Comprar</a>
-            </div>
-
-            <div class="proyecto-card" data-categoria="desarrolloWeb">
-                <img src="img/proyecto2.jpg" alt="">
-                <h3>Sistema de Gestión de Carpinteria</h3>
-                <p>Sistema web desarrollado para optimizar la administración integral de una carpintería.</p>
-                <a href="#" class="btn-proyecto">Ver proyecto</a>
-                <a href="#" class="btn-proyecto">Comprar</a>
-            </div>
-
-            
-            <!-- Animaciones Web -->
-
-            <div class="proyecto-card" data-categoria="AnimacionesWeb">
-                <img src="img/proyecto3.jpg" alt="">
-                <h3>Carcasa Impresa</h3>
-                <p>Diseño de pieza mecánica en 3D.</p>
-                <a href="#" class="btn-proyecto">Ver proyecto</a>
-                <a href="#" class="btn-proyecto">Comprar</a>
-            </div>
-
-                <!-- Animaciones en Python -->
-    
-                <div class="proyecto-card" data-categoria="animacionesPython">
-                    <img src="img/proyecto4.jpg" alt="">
-                    <h3>Corazón en Python</h3>
-                    <p>Este código utiliza la biblioteca Turtle de Python para dibujar un corazón</p>
-                    <a href="#" class="btn-proyecto">Ver proyecto</a>
-                    <a href="#" class="btn-proyecto">Comprar</a>
+                <p>Robot móvil de vigilancia todoterreno con transmisión de video en tiempo real mediante Wi-Fi desarrollado con Arduino y ESP32.</p>
+                <div class="acciones-proyecto">
+                    <a href="vigi-bot.html" class="btn-proyecto">Ver detalles</a>
                 </div>
+            </div>
+
+            <!-- Desarrollo Web: Portafolio -->
+            <div class="proyecto-card" data-categoria="desarrolloWeb">
+                <img src="img/proyecto-web.svg" alt="Mockup del sitio web portafolio personal">
+                <h3>Portafolio Web</h3>
+                <p>Sitio web personal desarrollado con HTML5 semántico, CSS3 moderno, JavaScript nativo, diseño responsivo y modo oscuro persistente.</p>
+                <div class="acciones-proyecto">
+                    <a href="index.html" class="btn-proyecto">Ver demo</a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-proyecto-secundario">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Desarrollo Web: Sistema Carpintería -->
+            <div class="proyecto-card" data-categoria="desarrolloWeb">
+                <img src="img/proyecto-carpinteria.svg" alt="Panel de gestión de carpintería y materiales">
+                <h3>Sistema de Gestión de Carpintería</h3>
+                <p>Plataforma web para optimizar la administración de una carpintería: control de pedidos, clientes, inventario de madera y facturación.</p>
+                <div class="acciones-proyecto">
+                    <a href="contacto.html" class="btn-proyecto">Consultar</a>
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-proyecto-secundario">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Robotica / Modelado 3D -->
+            <div class="proyecto-card" data-categoria="robotica">
+                <img src="img/proyecto-3d.svg" alt="Diseño de pieza mecánica y carcasa 3D">
+                <h3>Carcasa Impresa en 3D</h3>
+                <p>Diseño y modelado de pieza mecánica en 3D adaptada a la protección de los circuitos y motores del robot de vigilancia.</p>
+                <div class="acciones-proyecto">
+                    <a href="vigi-bot.html" class="btn-proyecto">Ver integración</a>
+                </div>
+            </div>
+
+            <!-- Python: Animación Turtle -->
+            <div class="proyecto-card" data-categoria="animacionesPython">
+                <img src="img/proyecto-python.svg" alt="Código y renderizado de corazón en Python Turtle">
+                <h3>Animación Geométrica en Python</h3>
+                <p>Proyecto que utiliza la biblioteca Turtle de Python para renderizar curvas matemáticas y animaciones gráficas en pantalla.</p>
+                <div class="acciones-proyecto">
+                    <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn-proyecto">Ver código</a>
+                </div>
+            </div>
 
         </section>
- 
 
     </main>
     
     <footer class="footer">
-        <p>Todos los derechos reservados. Sebastian Bohorquez Coronado - Ingeniero de Sistemas</p>
-        <p>© 2026 Blod Personal — Marca personal</p>
+        <p>Todos los derechos reservados. Sebastian Bohorquez Coronado — Ingeniero de Sistemas</p>
+        <p>© 2026 Blog Personal — Marca personal</p>
     </footer>
 
     <script src="JavaScript/script.js"></script>

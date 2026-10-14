@@ -1,0 +1,229 @@
+:root {
+    --primary: #f43f5e;
+    --primary-glow: rgba(244, 63, 94, 0.4);
+    --dark: #090d16;
+    --card-bg: rgba(15, 23, 42, 0.88);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at center, #1e1b4b 0%, #090d16 100%);
+    color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+    padding: 1.5rem;
+}
+
+#canvas-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: rgba(9, 13, 22, 0.6);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+}
+
+.music-btn {
+    background: rgba(244, 63, 94, 0.2);
+    border: 1px solid var(--primary);
+    color: white;
+    padding: 0.5rem 1.1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.music-btn:hover {
+    background: var(--primary);
+}
+
+.demo-container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 500px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sobre-wrapper {
+    cursor: pointer;
+    perspective: 1000px;
+    margin: 2rem 0;
+    transition: transform 0.3s ease;
+}
+
+.sobre-wrapper:hover {
+    transform: scale(1.03);
+}
+
+.sobre {
+    width: 280px;
+    height: 180px;
+    background: linear-gradient(135deg, #e11d48, #be123c);
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(225, 29, 72, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sobre-solapa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 140px solid transparent;
+    border-right: 140px solid transparent;
+    border-top: 100px solid #f43f5e;
+    transform-origin: top;
+    transition: transform 0.6s ease;
+}
+
+.sobre.abierto .sobre-solapa {
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+
+.sello-corazon {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.instruccion {
+    color: #fbcfe8;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    animation: bounce 2s infinite;
+    text-align: center;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+.carta-contenido {
+    display: none;
+    background: var(--card-bg);
+    border: 1px solid rgba(244, 63, 94, 0.3);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 40px var(--primary-glow);
+    backdrop-filter: blur(16px);
+    width: 100%;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.corazon-animado {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    14% { transform: scale(1.25); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.25); }
+    70% { transform: scale(1); }
+}
+
+.carta-titulo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.6rem;
+    color: #f43f5e;
+    margin-bottom: 1rem;
+}
+
+.carta-texto {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #e2e8f0;
+    margin-bottom: 1.8rem;
+}
+
+.contador-dias {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contador-dias span {
+    display: block;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contador-dias strong {
+    font-size: 1.3rem;
+    color: #2ec4b6;
+}
+
